@@ -54,6 +54,10 @@ object KotlinWorkshop3 {
         TODO()
     }
 
+    val printLowerGuesses: (Int) -> Int = {
+        TODO()
+    }
+
     private fun getUpperBound(): Int? {
         println("Enter maximum number")
         val scanner = Scanner(System.`in`)
