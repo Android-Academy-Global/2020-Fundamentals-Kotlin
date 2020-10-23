@@ -19,6 +19,10 @@ class SimplePhoneVerificator(private val codeChecker: CodeChecker) {
         }
         return codeChecker.invoke(code)
     }
+
+    fun setVerifiedProperty(property: String) {
+        phone = property
+    }
 }
 
 class ConsoleLogger {
