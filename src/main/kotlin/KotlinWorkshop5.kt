@@ -16,6 +16,9 @@ abstract class AbstractVerificator : Verificator {
     }
 }
 
+// Class for demonstrate interface and abstract class using
+// Compare it with SimplePhoneVerificator from KotlinWorkshop4
+// Can we replace SimplePhoneVerificator with PhoneVerificator in KotlinWorkshop4?
 class PhoneVerificator(private val codeChecker: CodeChecker) : AbstractVerificator() {
     override fun verify(code: String): Boolean {
         if (property.isEmpty()) {
@@ -29,6 +32,7 @@ class PhoneVerificator(private val codeChecker: CodeChecker) : AbstractVerificat
         return codeChecker.invoke(code)
     }
 }
+
 
 class GmailVerificator : AbstractVerificator() {
 
