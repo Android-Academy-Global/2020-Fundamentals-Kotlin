@@ -5,6 +5,9 @@ import kotlin.collections.AbstractList
 import kotlin.random.Random
 
 // workshop #9 - generics
+/*
+ * Класс программиста, который может учить и забывать концепты на определенном языке.
+ */
 
 fun main() {
     val p = Programmer<Kotlin>()
@@ -23,7 +26,7 @@ fun main() {
 
 //    p.forget(Kotlin("generics"))
     println(p.howManyConceptsDoIKnow())
-    // should be equal to 3
+    // should be equal to 2
 }
 
 
@@ -46,24 +49,3 @@ data class JavaLanguage(override val element: String) : Language
 data class Kotlin(override val element: String): Language
 data class Swift(override val element: String): Language
 data class C_Sharp(override val element: String): Language
-
-
-//===========================================================
-
-
-class ProgrammerDone<T: Language>() {
-
-    private val concepts = mutableListOf<T>()
-
-    fun howManyConceptsDoIKnow(): Int = concepts.size
-
-    fun learn(concept: T) {
-        concepts.add(concept)
-    }
-
-    fun forget(concept: T) {
-        concepts.remove(concept)
-    }
-
-    fun lastConcept(): T = concepts.last()
-}
