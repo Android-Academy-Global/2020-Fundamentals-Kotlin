@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.linker.Bootstrap
-
 // Workshop #4 - classes, properties, constructor, visibility modifiers
 
 typealias CodeChecker = (String) -> Boolean
@@ -41,8 +39,8 @@ object PhoneChecker {
         val phoneVerificator = PhoneVerificator(codeChecker)
 
         // TODO: add logic only here
-        // Use phoneVerificator to verify your phone successfully
-        // You program must print "Code is verified!"
+        // Use PhoneVerificator.verify and PhoneVerificator.setVerifiedProperty methods to verify your phone
+        // You program should print "Code is verified!"
 
         // TODO: Uncomment
         /*if (isVerified) {
