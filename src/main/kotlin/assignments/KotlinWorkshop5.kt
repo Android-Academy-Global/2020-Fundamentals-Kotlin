@@ -1,4 +1,4 @@
-// workshop #5 - inheritance, abstract class, interface
+package assignments// workshop #5 - inheritance, abstract class, interface
 
 interface Verificator {
     fun verify(code: String): Boolean

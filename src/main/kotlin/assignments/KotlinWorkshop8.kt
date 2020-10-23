@@ -1,4 +1,4 @@
-// workshop #8 - const, companion object, extension func
+package assignments// workshop #8 - const, companion object, extension func
 
 
 fun main(){

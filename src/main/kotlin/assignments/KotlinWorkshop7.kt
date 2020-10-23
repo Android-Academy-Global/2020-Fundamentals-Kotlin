@@ -1,3 +1,5 @@
+package assignments
+
 import java.util.*
 import kotlin.random.Random
 

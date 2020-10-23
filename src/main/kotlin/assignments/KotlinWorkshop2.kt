@@ -1,3 +1,5 @@
+package assignments
+
 import java.util.*
 import kotlin.random.Random
 
@@ -23,6 +25,7 @@ object KotlinWorkshop2 {
             //  if user entered number over randomNumber - show message "Your Guess is Higher"
             //  break while loop when user write correct number and show message "Congratulations"
         }
+
 
         // TODO uncomment and finish initialization of numbersArray. It should be array of int
         //var numbersArray =

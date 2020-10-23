@@ -1,4 +1,4 @@
-// Workshop #4 - classes, properties, constructor, visibility modifiers
+package assignments// Workshop #4 - classes, properties, constructor, visibility modifiers
 
 typealias CodeChecker = (String) -> Boolean
 

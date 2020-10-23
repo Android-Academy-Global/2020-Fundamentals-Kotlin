@@ -1,3 +1,5 @@
+package solutions
+
 import java.util.*
 import kotlin.collections.AbstractList
 import kotlin.random.Random
@@ -5,36 +7,24 @@ import kotlin.random.Random
 // workshop #9 - generics
 
 fun main() {
-    val p = Programmer<Kotlin>()
+    val p = ProgrammerDone<Kotlin>()
 
-    //TODO: uncomment all
-//    p.learn(Kotlin("basics"))
-//
-//    p.learn(Kotlin("generics"))
-//    p.learn(Kotlin("coroutines"))
+    p.learn(Kotlin("basics"))
 
-    println(p.howManyConceptsDoIKnow())
+    p.learn(Kotlin("generics"))
+    p.learn(Kotlin("coroutines"))
+
     // should be equal to 3
+    println(p.howManyConceptsDoIKnow())
 
-    println(p.lastConcept())
     //should be Kotlin(element=coroutines)
+    println(p.lastConcept())
 
-//    p.forget(Kotlin("generics"))
-    println(p.howManyConceptsDoIKnow())
+    p.forget(Kotlin("generics"))
     // should be equal to 3
+    println(p.howManyConceptsDoIKnow())
 }
 
-
-class Programmer<T: Language>() {
-
-    fun howManyConceptsDoIKnow(): Int = TODO()
-
-    // TODO: add "learn" function with new concept
-
-    //TODO: add "forget" function with one concept to forget
-
-    fun lastConcept(): T = TODO()
-}
 
 interface Language{
     val element: String
@@ -44,9 +34,6 @@ data class JavaLanguage(override val element: String) : Language
 data class Kotlin(override val element: String): Language
 data class Swift(override val element: String): Language
 data class C_Sharp(override val element: String): Language
-
-
-//===========================================================
 
 
 class ProgrammerDone<T: Language>() {
