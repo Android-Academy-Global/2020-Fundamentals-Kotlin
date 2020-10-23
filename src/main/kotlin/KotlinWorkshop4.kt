@@ -2,7 +2,7 @@
 
 typealias CodeChecker = (String) -> Boolean
 
-class PhoneVerificator(private val codeChecker: CodeChecker) {
+class SimplePhoneVerificator(private val codeChecker: CodeChecker) {
 
     private val consoleLogger: ConsoleLogger = ConsoleLogger()
 
@@ -19,10 +19,6 @@ class PhoneVerificator(private val codeChecker: CodeChecker) {
         }
         return codeChecker.invoke(code)
     }
-
-    fun setVerifiedProperty(property: String) {
-        phone = property
-    }
 }
 
 class ConsoleLogger {
@@ -31,16 +27,22 @@ class ConsoleLogger {
     }
 }
 
-object PhoneChecker {
+object SimplePhoneChecker {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val codeChecker: CodeChecker = { string -> string == "1234" }
-        val phoneVerificator = PhoneVerificator(codeChecker)
+        val codeChecker: CodeChecker = { code -> code == "1234" }
+        val phoneVerificator = SimplePhoneVerificator(codeChecker)
 
         // TODO: add logic only here
-        // Use PhoneVerificator.verify and PhoneVerificator.setVerifiedProperty methods to verify your phone
+        // Use SimplePhoneVerificator.verify and SimplePhoneVerificator.setVerifiedProperty methods to verify your phone
         // You program should print "Code is verified!"
+
+        // Solution example:
+        /*val phone = "89626200421"
+        val code = "1234"
+        phoneVerificator.setVerifiedProperty(phone)
+        val isVerified = phoneVerificator.verify(code)*/
 
         // TODO: Uncomment
         /*if (isVerified) {
@@ -50,9 +52,3 @@ object PhoneChecker {
         }*/
     }
 }
-
-// Solution example:
-/*val phone = "89626200421"
-        val code = "1234"
-        phoneVerificator.setVerifiedProperty(phone)
-        val isVerified = phoneVerificator.verify(code)*/
