@@ -1,4 +1,4 @@
-package solutions
+package day_1_kotlin.solutions
 
 import java.util.*
 import kotlin.random.Random

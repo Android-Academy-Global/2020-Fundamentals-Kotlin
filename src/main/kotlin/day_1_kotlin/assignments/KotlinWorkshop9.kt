@@ -1,8 +1,4 @@
-package assignments
-
-import java.util.*
-import kotlin.collections.AbstractList
-import kotlin.random.Random
+package day_1_kotlin.assignments
 
 // workshop #9 - generics
 /*

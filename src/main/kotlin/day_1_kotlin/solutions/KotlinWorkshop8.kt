@@ -1,4 +1,4 @@
-package solutions
+package day_1_kotlin.solutions
 
 // workshop #8 - const, companion object, extension func
 

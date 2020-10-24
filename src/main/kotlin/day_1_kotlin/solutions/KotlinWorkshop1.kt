@@ -1,7 +1,6 @@
-package solutions
+package day_1_kotlin.solutions
 
 import java.util.*
-import kotlin.random.Random
 
 // Workshop #1 - val, var, null, kotlin null safety, Elvis operator
 object KotlinWorkshop1 {

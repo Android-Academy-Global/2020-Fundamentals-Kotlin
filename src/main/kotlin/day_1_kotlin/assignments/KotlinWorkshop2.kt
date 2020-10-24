@@ -1,4 +1,4 @@
-package assignments
+package day_1_kotlin.assignments
 
 import java.util.*
 import kotlin.random.Random

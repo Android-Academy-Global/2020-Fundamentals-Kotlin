@@ -1,4 +1,4 @@
-package assignments// workshop #5 - inheritance, abstract class, interface
+package day_1_kotlin.assignments// workshop #5 - inheritance, abstract class, interface
 
 interface Verificator {
     fun verify(code: String): Boolean

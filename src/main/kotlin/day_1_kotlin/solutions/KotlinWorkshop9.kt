@@ -1,8 +1,4 @@
-package solutions
-
-import java.util.*
-import kotlin.collections.AbstractList
-import kotlin.random.Random
+package day_1_kotlin.solutions
 
 // workshop #9 - generics
 

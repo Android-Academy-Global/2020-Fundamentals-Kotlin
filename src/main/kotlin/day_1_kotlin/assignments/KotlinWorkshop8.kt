@@ -1,4 +1,4 @@
-package assignments// workshop #8 - const, companion object, extension func
+package day_1_kotlin.assignments// workshop #8 - const, companion object, extension func
 
 /*
  * Сокращаем телефон до максимально докустимой длины maxLength

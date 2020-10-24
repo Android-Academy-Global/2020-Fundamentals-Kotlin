@@ -1,4 +1,4 @@
-package assignments// Workshop #4 - classes, properties, constructor, visibility modifiers
+package day_1_kotlin.assignments// Workshop #4 - classes, properties, constructor, visibility modifiers
 
 typealias CodeChecker = (String) -> Boolean
 

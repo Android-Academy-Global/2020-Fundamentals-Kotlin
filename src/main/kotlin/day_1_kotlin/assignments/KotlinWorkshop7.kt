@@ -1,7 +1,6 @@
-package assignments
+package day_1_kotlin.assignments
 
 import java.util.*
-import kotlin.random.Random
 
 // workshop #7 - list, mutable list, useful functions, maps
 
