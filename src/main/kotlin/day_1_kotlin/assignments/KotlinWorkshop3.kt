@@ -34,7 +34,7 @@ object KotlinWorkshop3 {
         printTotalCountOfArray()
 
         // TODO fill getHigherGuesses function
-        getHigherGuesses(randomNumber)
+        // getHigherGuesses(randomNumber)
 
         // TODO add high level function for printing max element from array, so you can uncomment next string and check result
         // guesses.printHigherElement()
