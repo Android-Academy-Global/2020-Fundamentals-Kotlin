@@ -1,4 +1,4 @@
-package day_1_kotlin.assignments
+package day_1_kotlin.solutions
 
 // Workshop #4 - classes, properties, constructor, visibility modifiers
 
@@ -40,15 +40,15 @@ object SimplePhoneChecker {
         val codeChecker: CodeChecker = { code -> code == "1234" }
         val phoneVerificator = SimplePhoneVerificator(codeChecker)
 
-        // TODO: add logic here
-        // Use SimplePhoneVerificator.verify and SimplePhoneVerificator.setVerifiedProperty methods to verify your phone
-        // You program should print "Code is verified!"
+        val phone = "89626200421"
+        val code = "1234"
+        phoneVerificator.setVerifiedProperty(phone)
+        val isVerified = phoneVerificator.verify(code)
 
-        // TODO: Uncomment
-        /*if (isVerified) {
+        if (isVerified) {
             println("Code is verified!")
         } else {
             println("Error: Code is not verified!")
-        }*/
+        }
     }
 }
