@@ -5,7 +5,7 @@ import kotlin.random.Random
 
 // Workshop #2 - control flow (if, when), arrays, for loop, if expression, return & jumps
 
-object KotlinWorkshop2Expected {
+object KotlinWorkshop2 {
 
     @JvmStatic
     fun main(args: Array<String>) {

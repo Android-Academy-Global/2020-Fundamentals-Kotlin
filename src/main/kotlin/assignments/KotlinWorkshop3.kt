@@ -26,8 +26,6 @@ object KotlinWorkshop3 {
         printGameStats(randomNumber)
 
         // TODO print every element of guesses in separate line via .forEach high-level function
-
-        // TODO create function for printing only even guesses
     }
 
 
