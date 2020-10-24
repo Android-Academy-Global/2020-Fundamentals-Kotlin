@@ -7,17 +7,20 @@ import kotlin.random.Random
 
 object KotlinWorkshop2 {
 
+    // You can run the main function to test the code
     @JvmStatic
     fun main(args: Array<String>) {
+        // Don't touch!
         val upperBound = getUpperBound()
         val nonNullUpperBound = upperBound ?: 10
         val randomNumber = Random.nextInt(nonNullUpperBound)
         val scanner = Scanner(System.`in`)
 
+        // Working part
         print("Guess number :")
         while (true) {
             print("User Input:")
-            //storing user input in userInput variable
+            // storing user input in userInput variable
             val userInput: Int = scanner.nextInt()
 
             // TODO: add logic for comparing userInput with randomNumber with if operator.
@@ -27,6 +30,7 @@ object KotlinWorkshop2 {
         }
 
 
+        // * * * Bonus task * * * (work on home)
         // TODO uncomment and finish initialization of numbersArray. It should be array of int
         //var numbersArray =
 

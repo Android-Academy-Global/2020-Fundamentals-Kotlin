@@ -11,25 +11,35 @@ object KotlinWorkshop3 {
 
     @JvmStatic
     fun main(args: Array<String>) {
+        // Don't touch!
         val upperBound = getUpperBound()
         val nonNullUpperBound = upperBound ?: 10
         val randomNumber = Random.nextInt(nonNullUpperBound)
         val scanner = Scanner(System.`in`)
 
+        // Working zone
+
         var guessed = false
         while (!guessed) {
-            // TODO create playRound function with logic for guessing number from workshop 2.
-            //  save inside playRound data for guesses in guesses array for further analysis (look at printGameStats TODOs)
-            //guessed = playRound(scanner, randomNumber)
+            val guess = scanner.nextInt()
+//            guessed = playRound(guess, randomNumber)
         }
 
+        // TODO (bonus): print every element of guesses in separate line via .forEach high-level function
         printGameStats(randomNumber)
-
-        // TODO print every element of guesses in separate line via .forEach high-level function
     }
 
+    // TODO 1: declare playRound function: takes 2 integer arguments and returns a boolean
+    // TODO 2: fill in with logic for guessing number from workshop 2.
+//    private fun playRound(...) : ... {
+//        return false
+//    }
 
 
+    //region BONUS TASK
+
+    // * * * Bonus task * * * (work on home)
+    // Create analytics system for the game. Collect stats and print them
     private fun printGameStats(randomNumber: Int) {
         printTotalCountOfArray()
 
@@ -67,4 +77,5 @@ object KotlinWorkshop3 {
             return null
         }
     }
+    //endregion
 }
