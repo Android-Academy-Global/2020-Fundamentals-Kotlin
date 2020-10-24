@@ -1,5 +1,9 @@
 package assignments// workshop #8 - const, companion object, extension func
 
+/*
+ * Сокращаем телефон до максимально докустимой длины maxLength
+ * и пишем функцию экстеншен на лист, которая заменяет каждый i-й элемент номером телефона
+ */
 
 fun main(){
     val lst = mutableListOf("1", 3, 4, "Patrick", 3.4, "123-59")
@@ -20,21 +24,4 @@ class Person(phoneCode: String) {
     private fun replacePlacesWithThePhoneCode(list: List<Any>, placeNum: Int = 3) {
         list.mapIndexed { index, any -> if (index % placeNum == 0) code else any}
     }
-}
-
-
-
-//======================================================================
-
-class PersonDone(phoneCode: String) {
-    val code = if (phoneCode.length > maxLengthDone) phoneCode.subSequence(0, maxLengthDone) else phoneCode
-
-    companion object {
-        private const val maxLengthDone = 12
-    }
-}
-
-//TODO: make this fun as extension to a list outside the Person class
-fun List<Any>.replacePlacesWithThePhoneCode(person: Person, placeNum: Int = 3) {
-    this.mapIndexed { index, any -> if (index % placeNum == 0) person.code else any}
 }
