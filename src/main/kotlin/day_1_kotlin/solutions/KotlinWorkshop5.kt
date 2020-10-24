@@ -1,4 +1,4 @@
-package day_1_kotlin.assignments
+package day_1_kotlin.solutions
 
 // workshop #5 - inheritance, abstract class, interface
 
@@ -13,7 +13,7 @@ abstract class AbstractVerificator : Verificator {
     protected var property: String = ""
 
     fun setVerifiedProperty(property: String) {
-        // TODO: Add code here
+        this.property = property
     }
 }
 
@@ -40,7 +40,9 @@ class GmailVerificator : AbstractVerificator() {
     private val gmailCodeChecker: CodeChecker = { code -> code == "gmailCode" }
 
     override fun verify(code: String): Boolean {
-        return false // TODO: change return value for correct tests execution
+        val isCodeCorrect = gmailCodeChecker.invoke(code)
+        val isGmail = property.contains("@gmail.com")
+        return isCodeCorrect && isGmail
     }
 }
 
