@@ -4,7 +4,7 @@ import java.util.*
 import kotlin.random.Random
 
 // Workshop #1 - val, var, null, kotlin null safety, Elvis operator
-object KotlinWorkshop1Expected {
+object KotlinWorkshop1 {
 
     @JvmStatic
     fun main(args: Array<String>) {

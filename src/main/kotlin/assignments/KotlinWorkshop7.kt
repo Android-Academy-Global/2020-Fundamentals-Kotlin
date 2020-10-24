@@ -11,7 +11,9 @@ object KotlinWorkshop7 {
     fun main(args: Array<String>) {
         val scanner = Scanner(System.`in`)
 
-        // TODO create list of even numbers from 0 to 50
+        // TODO create variable evenList and add to it only even numbers from 0 to 50
+        /*for (i in 0..50) {
+        }*/
 
         print("Please enter word:")
         //storing user input in firstUserString variable
@@ -34,13 +36,4 @@ object KotlinWorkshop7 {
 
     }
 
-    private fun getUpperBound(): Int? {
-        println("Enter maximum number")
-        val scanner = Scanner(System.`in`)
-        try {
-            return scanner.nextInt()
-        } catch (e: InputMismatchException) {
-            return null
-        }
-    }
 }
