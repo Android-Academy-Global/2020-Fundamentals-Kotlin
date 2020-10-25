@@ -101,7 +101,7 @@ object KotlinWorkshop3 {
 
 
 
-    /* Для корректного прогона воркшопа, не модифицируй утилиты ниже */
+    /* Для корректного прогона воркшопа не модифицируй утилиты ниже */
 
     private fun getUpperBound(scanner: Scanner): Int? {
         val upperLimit = 20

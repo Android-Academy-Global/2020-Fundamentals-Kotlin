@@ -12,7 +12,7 @@ object D_HowToUseHotkeys {
     private fun jumpToMethod() {
     }
 
-    // For a fast jump to the place where you jus modified a code,
+    // For a fast jump to the place where you just modified the code,
     // press "Ctrl+Shift+Backspace".
     // ---> Write something, place cursor to a different place, press combo.
 
