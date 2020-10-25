@@ -51,8 +51,8 @@ object KotlinWorkshop3 {
     //  Объяви функцию "playRound": она должна принимать на вход два Int аргумента и возвращать Boolean.
     // TODO 2: Функция возвращает "true" и выводит сообщение "Congratulations!",
     //  когда ввод с клавиатуры равен значению "randomNumber";
-    //  Если введено число меньше "randomNumber", выведи сообщение "Your Guess is higher, continue." и верни false;
-    //  Если введено число больше "randomNumber", выведи сообщение "Your Guess is higher, continue." и верни false.
+    //  Если введено число больше "randomNumber", выведи сообщение "Your Guess is higher, continue." и верни false;
+    //  Если введено число меньше "randomNumber", выведи сообщение "Your Guess is lower, continue." и верни false.
     //  Можно использовать наработки из workshop 2, с отличием, что здесь это вынесенная функция, нет цикла и возвращает результат.
 //    private fun playRound(...) : ... {
 //

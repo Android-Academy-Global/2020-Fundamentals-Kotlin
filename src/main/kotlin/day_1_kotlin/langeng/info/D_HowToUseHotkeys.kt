@@ -8,7 +8,7 @@ object D_HowToUseHotkeys {
     * */
 
     // For a fast jump to a method or variable,
-    // place a cursor on ot and press "Ctrl+B"
+    // place a cursor on it and press "Ctrl+B"
     private fun jumpToMethod() {
     }
 
