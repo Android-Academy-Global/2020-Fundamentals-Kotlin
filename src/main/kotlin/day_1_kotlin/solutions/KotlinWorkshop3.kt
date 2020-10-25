@@ -1,99 +1,183 @@
 package day_1_kotlin.solutions
 
 import java.util.*
+import java.util.logging.Logger
 import kotlin.random.Random
 
 // Workshop #3 - functions, filters, lambda, high-order function
-
 object KotlinWorkshop3 {
 
-    private val guesses = mutableListOf<Int>()
-
+    // You can run the main function to test the code
     @JvmStatic
     fun main(args: Array<String>) {
-        val upperBound = getUpperBound()
+
+        /* Exercise area */
+
+        // Initializing variables in runtime with input.
+        // While running the program. Look at the console. Click inside the console window. Input a number.
+        // Don't touch! Given:
+        val scanner = Scanner(System.`in`)
+        val upperBound = getUpperBound(scanner)
         val nonNullUpperBound = upperBound ?: 10
         val randomNumber = Random.nextInt(nonNullUpperBound)
-        val scanner = Scanner(System.`in`)
+        val capacity = nonNullUpperBound
+        val guesses = createIntArrayOfCapacity(capacity)
 
         var guessed = false
-        while (!guessed) {
-            guessed = playRound(scanner, randomNumber)
+        var index = 0
+        while (!guessed && index < capacity) {
+            print("Input a number in range 0..$nonNullUpperBound inclusive: ")
+            // Storing user input in userInput variable
+            // While running the program. Look at the console. Click inside the console window. Input a number.
+            val userInput: Int = getNextInput(scanner, nonNullUpperBound)
+            guesses[index] = userInput
+
+            // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
+            guessed = playRound(userInput, randomNumber)
+
+            index++
         }
 
-        printGameStats(randomNumber)
-
-        guesses.forEach {
-            println("$it")
-        }
+        // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
+        printGameStats(guesses, randomNumber)
     }
 
-    private fun playRound(scanner: Scanner, randomNumber: Int): Boolean {
-        print("User Input:")
-        //storing user input in userInput variable
-        val userInput: Int = scanner.nextInt()
-
-        if (userInput == randomNumber) {
-            println("Congratulation")
-            return true
-        } else if (userInput > randomNumber) {
-            println("Your Guess is Lower")
-        } else {
-            println("Your Guess is Higher")
+    // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
+    // TODO 2: Add logic for comparing userInput with randomNumber with If-Else operator.
+    //  Break infinite while loop when user input correct number. Show message "Congratulations"
+    //  If user entered number below randomNumber - show message "Your Guess is Lower"
+    //  if user entered number over randomNumber - show message "Your Guess is Higher".
+    //  See workshop #2
+    private fun playRound(userInput: Int, randomNumber: Int): Boolean {
+        when {
+            userInput == randomNumber -> {
+                println("Congratulation, it was $randomNumber!")
+                return true
+            }
+            userInput > randomNumber -> {
+                println("Your Guess is higher, continue.")
+            }
+            else -> {
+                println("Your Guess is lower, continue.")
+            }
         }
+
         return false
     }
 
-    private fun printGameStats(randomNumber: Int) {
-        printTotalCountOfArray()
 
-        getHigherGuesses(randomNumber)
 
-        guesses.printHigherElement(randomNumber)
+    /* Exercise advanced area */
 
-        printLowerGuesses(randomNumber)
+    // Create analytics system for the game. Collect stats and print.
+    private fun printGameStats(guesses: IntArray, randomNumber: Int) {
+        // TODO 3: Uncomment. Print total guesses count.
+        printTotalCountOfArray(guesses)
+
+        // TODO 4: Uncomment.
+        //  Add high level function "countHigherGuesses" for printing higher elements from array.
+        guesses.countHigherGuesses(guesses, randomNumber)
+
+        // TODO 5: Uncomment.
+        //  Create lambda function "countLowerGuesses" for printing lower elements from array.
+        countLowerGuesses(guesses, randomNumber)
+
+        // TODO 6: Uncomment.
+        //  Print every element of guesses in separate line via .forEach high-level function.
+        println("All guesses:")
+        guesses.forEach {
+            print("$it, ")
+        }
     }
 
-    // print total guesses count. Should take one parameter with default value for class var guesses,
-    // but should can be reused for other arrays
-    private fun printTotalCountOfArray(array: List<Any> = guesses) {
-        println("Total count = $guesses")
+    // TODO 3
+    // Should print total guesses count.
+    private fun printTotalCountOfArray(guesses: IntArray) {
+        println("\nTotal count: ${guesses.size}\n")
     }
 
-    // should return guesses that were higher than randomNumber (should pass in fun parameters)
-    private fun getHigherGuesses(randomNumber: Int): List<Int> {
-        val result = mutableListOf<Int>()
+    // TODO 4
+    // Should count and print guesses that were higher than randomNumber.
+    // Should return count as fun result.
+    private fun IntArray.countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
+        var counter = 0
         for (guess in guesses) {
             if (guess > randomNumber) {
-                result.add(guess)
+                counter++
+                println("$counter) $guess is higher than $randomNumber")
             }
         }
-        return result
+
+        println("Total count of higher guesses: $counter\n")
+
+        return counter
     }
 
-    val printLowerGuesses: (Int) -> Unit = {
+    // TODO 5
+    // Should count and print guesses that were lower than randomNumber.
+    val countLowerGuesses: (IntArray, Int) -> Unit = { guesses, randomNumber ->
+        var counter = 0
         for (guess in guesses) {
-            if (guess < it) {
-                println("Guess lower than number = $guesses")
+            if (guess < randomNumber) {
+                counter++
+                println("$counter) $guess is lower than $randomNumber")
             }
         }
+
+        println("Total count of lower guesses: $counter\n")
     }
 
-    fun List<Int>.printHigherElement(number: Int) {
-        for (guess in guesses) {
-            if (guess > number) {
-                println("Guess higher than number = $guesses")
+
+
+    /* DO NOT TOUCH the utils below. */
+
+    private fun getUpperBound(scanner: Scanner): Int? {
+        val upperLimit = 20
+        val lowerLimit = 1
+
+        println("Game: \"Guess a number\"")
+        print("Enter maximum number in range 1..20 inclusive: ")
+        return try {
+            var input = scanner.nextInt()
+            if (input in lowerLimit..upperLimit) {
+                input
+
+            } else {
+                println("Wrong number. Use default as limit: $upperLimit")
+                upperLimit
             }
-        }
-    }
 
-    private fun getUpperBound(): Int? {
-        println("Enter maximum number")
-        val scanner = Scanner(System.`in`)
-        try {
-            return scanner.nextInt()
         } catch (e: InputMismatchException) {
-            return null
+            null
         }
+    }
+
+    private fun getNextInput(scanner: Scanner, nonNullUpperBound: Int): Int {
+        val lowerLimit = 0
+        val badResult = -1
+
+        return try {
+            var input = scanner.nextInt()
+            if (input in lowerLimit..nonNullUpperBound) {
+                input
+
+            } else {
+                println("Wrong input. Should be $nonNullUpperBound or lower.")
+                badResult
+            }
+
+        } catch (e: InputMismatchException) {
+            val log = Logger.getLogger("KotlinWorkshop3Logger")
+            log.throwing("KotlinWorkshop3Logger", "getNextInput()", e)
+            badResult
+        }
+    }
+
+    private fun createIntArrayOfCapacity(capacity: Int): IntArray {
+        val array = mutableListOf<Int>()
+        for (i in 0 until capacity) {
+            array.add(0)
+        }
+        return array.toIntArray()
     }
 }

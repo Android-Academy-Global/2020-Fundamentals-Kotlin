@@ -8,50 +8,75 @@ object KotlinWorkshop1 {
     @JvmStatic
     fun main(args: Array<String>) {
 
-        // A bit of examples
+        /* Exercise area */
+
+        // Initializing variables. Pay attention - it's nullable!
+        // Given:
+        val nullableElvisString: String? = null
+        val nullableAssertionString: String? = "potentially null"
+        val emptyString = ""
+
+        // If "nullableString" is null, "notNullUserString" should be equal to "emptyString".
+        // TODO 1: Uncomment.
+        //  Fix the assigning with elvis operator to correct "notNullUserString" declaration.
+//        var notNullUserString: String =
+//        println("Result string is empty $notNullUserString")
+
+        // TODO 2: Uncomment.
+        //  We know that "nullableString" is non-null by fact. Fix assertion using !! operator.
+//        notNullUserString =
+//        println("Result string is $notNullUserString")
+
+
+
+        /* Exercise advanced area */
+
+        // If first number is null, result should be null. If second one is null, result should be equal to first number
+        // use one safe call operation and one elvis operator in operation
+        // pay attention at var and val difference
+        // TODO 3: Uncomment. Assign a sum of two numbers to "sum" using .plus() function.
+        //  Change declaration of "sum" if needed.
+        //  Use '?' check, '.plus()' function and '?:' to add valid alternative inside '.plus()'.
+        val notNullAlternative = 0
+        val firstNumber: Int? = 10
+        val secondNumber: Int? = 20
+//        val sum : Int? =
+//        println("Sum is {$sum}")
+
+
+        // TODO 4: Uncomment. Store user String input in a "stringInput" variable.
+        // While running the program. Look at the console. Click inside the console area. Input a string.
+//        print("Please, input a string: ")
+//        val stringInput: String? = MyScanner.scan.next() // <--- string input 1
+
+        // TODO 5: Uncomment.
+        //  Store user Int input in "firstIntInput" and "secondIntInput" variables.
+        //  Replace the 'null' to calculate a "sumIntInputs".
+        //  Use '?' check, '.plus()' function and '?:' to add valid alternative inside '.plus()'.
+        // While running the program. Look at the console. Click inside the console area. Input a number, then second number.
+//        print("Please, input a number: ")
+//        val firstIntInput: Int? = MyScanner.scan.nextInt() // <--- number input 1
+//        print("Please, input a second number: ")
+//        val secondIntInput: Int? = MyScanner.scan.nextInt() // <--- number input 2
+//        val sumIntInputs : Int? = firstIntInput?.plus(secondIntInput ?: notNullAlternative) // <--- replace 'null' with correct expression
+//        println("String:$stringInput, Summ of numbers:$sumIntInputs")
+
+
+
+        /* Examples area */
 
         val number: Int = -1
         val someNumber: Double = 2.5
         val someString: String = "Hello world"
         val someFlag: Boolean = true
-
-        // Magic
-        val scanner = Scanner(System.`in`)
-        print("Please, input any string:")
-        val userInput: String? = scanner.next()
-        //storing user input in firstUserInput variable
-//        val firstUserNumber: Int? = scanner.nextInt()
-//        print("Second Number:")
-//        //storing user input in secondUserInput variable
-//        val secondUserNumber: Int? = scanner.nextInt()
-
-
-
-        // storing user input in firstUserString variable. Pay attention - it's nullable!
-        val nullableString: String? = "Potentially null"
-
-        // TODO 1: fix the assigning with use of elvis operator. notNullUserString has correct declaration.
-        // if userString is null, notNullUserString should be equal to "emptyString"
-//        var notNullUserString: String = nullableString
-
-        // TODO 2: we know that user entered non-null string. Fix assertion using !! operator
-        // TODO: Sergei - add a smart and funny comment about why we shouldn't
-//        notNullUserString = nullableString
-//        println("User string is " + notNullUserString)
-
-
-        val sum : Int? = null
-        val firstNumber: Int? = 10
-        val secondNumber: Int? = 20
-
-        // * * *
-
-        // TODO 3: assign sum of two numbers to mainUserNumber using .plus() function. Change declaration of mainUserNumber is needed.
-        // if first number is null, result should be null. If second one is null, result should be equal to first number
-        // use one safe call operation and one elvis operator in operation
-        // pay attention at var and val difference
-
-        println("Sum is {$sum}")
+        var someNullableNumber: Long? = null
     }
+}
 
+/* DO NOT TOUCH the utils below. */
+
+class MyScanner {
+    companion object {
+        val scan = Scanner(System.`in`)
+    }
 }
