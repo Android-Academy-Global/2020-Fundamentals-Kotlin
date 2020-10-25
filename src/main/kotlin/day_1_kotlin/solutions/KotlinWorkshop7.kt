@@ -1,26 +1,12 @@
 package day_1_kotlin.solutions
 
-import java.util.*
-
-// workshop #7 - list, mutable list, useful functions, maps
-
+// Workshop #7 - list, mutable list, useful functions, maps
 object KotlinWorkshop7 {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val scanner = Scanner(System.`in`)
 
-        // TODO 1: create variable evenList and add to it only even numbers from 0 to 50
-        val evenList = mutableListOf<Int>()
-        for (i in 0..50) {
-            if (i % 2 == 0) {
-                evenList.add(i)
-            }
-        }
-
-        // TODO: uncomment and check the values are even
-        println(evenList)
-
+        // Don't touch! Given:
         val poem = arrayOf(
             "The", "leaves", "are", "falling",
             "One", "by", "one",
@@ -28,32 +14,48 @@ object KotlinWorkshop7 {
             "School’s", "begun"
         )
 
-        // TODO 2: print poem
-        //  1. filtered for words shorter than 5 symbols
-        //  2. reversed
+
+
+        /* Exercise area */
+
+        // TODO 1: Uncomment.
+        //  Initialize an evenList variable and add to it only "even" numbers from 0 to 50.
+        val evenList = mutableListOf<Int>()
+        for (i in 0..50 step 2) {
+            evenList.add(i)
+        }
+        println("\nEven numbers: $evenList")
+
+        // TODO 2: Print the "poem" for 2 cases:
+        //  1. Filter and print words shorter than 5 symbols;
+        //  2. Print poem reversed.
         val filtered = poem.filter { it.length < 5 }
         val reversed = poem.reversed()
-        println(filtered)
-        println(reversed)
+        println("\nFiltered: $filtered")
+        println("\nReversed: $reversed")
+        println("\n")
 
-        // * * * Bonus task * * * (work on home)
+
+
+        /* Exercise bonus area */
+
         val weatherMap = mutableMapOf(
-            "Moskow" to 2,
-            "St Petersburg" to -1,
+            "Moscow" to 2,
+            "St. Petersburg" to -1,
             "Minsk" to 4
         )
 
-        // TODO * add weather for Kiev and Tel-Aviv to weatherMap
+        // TODO 3. Add a weather for Kiev and Tel-Aviv to weatherMap.
+        // Map contains pairs of <Key, Value> where key is an index.
         weatherMap["Kiev"] = 6
         weatherMap["Tel-Aviv"] = 20
 
-        // TODO * filter and print trips with temperature of zero+
+        // TODO 4. Filter and print cities with temperature of zero+.
+        //  Connect operators as a chain.
         weatherMap.filter {
             it.value > 0
         }.forEach {
             println("City ${it.key} has temperature of ${it.value}")
         }
-
     }
-
 }
