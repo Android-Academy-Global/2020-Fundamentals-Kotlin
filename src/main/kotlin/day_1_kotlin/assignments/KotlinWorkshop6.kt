@@ -28,7 +28,7 @@ package day_1_kotlin.assignments
 //    }
 //}
 
-// TODO 6: create a enum Genre with a few values, and add it as a field to the VideoGame
+// TODO 6: create an enum Genre with a few values, and add it as a field to the VideoGame
 
 // * * * Bonus task * * * (work on home)
 // Create a new class hierarchy for an arbitrary topic

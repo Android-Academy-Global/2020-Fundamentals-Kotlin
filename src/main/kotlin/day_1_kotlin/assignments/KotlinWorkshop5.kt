@@ -17,7 +17,6 @@ abstract class Transport(protected var passengers: Int) : Driveable
 
 
 class Car(val passengersCount: Int) : Transport(passengersCount) {
-
     override fun drive() {
         println("Driving a car with a speed of light! $passengers passengers on board.")
     }
@@ -38,11 +37,11 @@ object VehiclesTest {
     fun main(args: Array<String>) {
         testBicycle()
         testCar()
-        // testYourVehicle()
+        testBus()
     }
 
-    // TODO: Write function to test your vehicle
-    private fun testYourVehicle() {
+    // TODO: Write a function to test your vehicle
+    private fun testBus() {
 
     }
 
