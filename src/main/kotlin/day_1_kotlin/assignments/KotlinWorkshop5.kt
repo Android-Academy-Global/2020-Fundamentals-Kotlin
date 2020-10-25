@@ -2,62 +2,70 @@ package day_1_kotlin.assignments
 
 // Workshop #5 - inheritance, abstract, interface
 
+// Declare a contract for a transport ability.
 interface Driveable {
     fun drive()
 }
 
-// Создадим сущность Bicycle, которая является транспортом для 1 человека
-class Bicycle : Transport(1) {
+// Declare a transport class which describes passenger transport of all types.
+// Give this transport an ability to drive.
+abstract class Transport(protected var passengersCount: Int): Driveable
+
+// Create a Bicycle transport which can carry a single person.
+class Bicycle: Transport(1) {
     override fun drive() {
-        println("Drive on bicycle")
+        println("Ride a bicycle.")
     }
 }
 
-abstract class Transport(protected var passengers: Int) : Driveable
 
 
-class Car(val passengersCount: Int) : Transport(passengersCount) {
-    override fun drive() {
-        println("Driving a car with a speed of light! $passengers passengers on board.")
-    }
-}
+/* Exercise area */
 
-// TODO 1: Write your own class Bus, that behaves the same as the one from Workshop 4
-//  However, instead of implementing it from scratch, make it in a way to extend Transport class
+// TODO 1: Create a new interface that will be appropriate for new classes below.
+//interface ...
 
-// class Bus ...
+// TODO 2: Write your own class Bus and some Car.
+//  Instead of writing it from scratch, extend it from the Transport class and your new interface.
+//class Bus ...
+//class Car ...
 
-// TODO 2: Create a new interface that will be appropriate for several classes above,
-//  implement it in several classes and call the method / methods in the Test object
-
-
+// TODO 3: Test your transport in appropriate sections
 object VehiclesTest {
 
+    // You can run the main function to test the code
     @JvmStatic
     fun main(args: Array<String>) {
-        testBicycle()
-        testCar()
         testBus()
+        testCar()
+        testBicycle()
     }
 
-    // TODO: Write a function to test your vehicle
     private fun testBus() {
-
-    }
-
-    private fun testBicycle() {
-        println("Test how bicycle drives..")
-        val bicycle = Bicycle()
-        bicycle.drive()
+        println("Testing how bus drives...")
+//        val bus = ...
     }
 
     private fun testCar() {
-        println("Test how car drives..")
-        val car = Car(4)
-        car.drive()
+        println("Testing how car drives...")
+//        val car = ...
+    }
+
+    private fun testBicycle() {
+        println("Testing how bicycle drives...")
+//        ...
+    }
+
+
+
+    /* Exercise bonus area */
+
+    // TODO 4: Test bus abilities as separate features.
+    private fun testBusParts() {
+        println("Testing bus's feature 1...")
+
+
+        println("Testing bus's feature 2...")
+
     }
 }
-
-
-// * * * Bonus task * * * (work on home)
-// Create a new class hierarchy for an arbitrary topic

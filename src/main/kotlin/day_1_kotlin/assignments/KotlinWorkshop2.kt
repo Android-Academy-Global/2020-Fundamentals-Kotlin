@@ -4,6 +4,7 @@ import java.util.*
 import kotlin.random.Random
 
 // Workshop #2 - control flow (if, when), arrays, for loop, if expression, return & jumps
+
 object KotlinWorkshop2 {
 
     // You can run the main function to test the code

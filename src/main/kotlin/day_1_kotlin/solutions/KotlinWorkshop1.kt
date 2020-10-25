@@ -3,6 +3,7 @@ package day_1_kotlin.solutions
 import java.util.*
 
 // Workshop #1 - val, var, null, kotlin null safety, Elvis operator
+
 object KotlinWorkshop1 {
 
     @JvmStatic
