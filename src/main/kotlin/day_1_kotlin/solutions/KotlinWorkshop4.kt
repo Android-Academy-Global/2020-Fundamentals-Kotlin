@@ -2,18 +2,21 @@ package day_1_kotlin.solutions
 
 // Workshop #4 - classes, properties, constructor, visibility modifiers
 
+typealias CodeChecker = (String) -> Boolean
 
-class SimplePhoneVerificator(private val codeChecker: (String) -> Boolean) {
+class SimplePhoneVerificator(private val codeChecker: CodeChecker) {
+
+    private val consoleLogger: ConsoleLogger = ConsoleLogger()
 
     private var phone: String = ""
 
     fun verify(code: String): Boolean {
         if (phone.isEmpty()) {
-            println("Phone is empty")
+            consoleLogger.log("Phone is empty")
             return false
         }
         if (code.length < 4) {
-            println("Code is too short")
+            consoleLogger.log("Code is too short")
             return false
         }
         return codeChecker.invoke(code)
@@ -24,11 +27,17 @@ class SimplePhoneVerificator(private val codeChecker: (String) -> Boolean) {
     }
 }
 
+class ConsoleLogger {
+    fun log(message: String) {
+        println(message)
+    }
+}
+
 object SimplePhoneChecker {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val codeChecker: (String) -> Boolean = { code -> code == "1234" }
+        val codeChecker: CodeChecker = { code -> code == "1234" }
         val phoneVerificator = SimplePhoneVerificator(codeChecker)
 
         val phone = "89626200421"
