@@ -6,24 +6,17 @@ interface Driveable {
     fun drive()
 }
 
-// Создадим сущность Bicycle, которая реализует наш Drivable
-class Bicycle : Driveable {
+// Создадим сущность Bicycle, которая является транспортом для 1 человека
+class Bicycle : Transport(1) {
     override fun drive() {
         println("Drive on bicycle")
     }
 }
 
-// Создадим сущность Car, которая наш Drivable.
-// Для сущности Car характерна зависимость от топлива (т.к без топлива машина не поедет)
-// Создадим абастрактный класс, который предоставялет механизм заправки средства передвижения топливом
+abstract class Transport(protected var passengers: Int) : Driveable
 
-abstract class Transport {
 
-    protected abstract var passengers: Int
-
-}
-
-class Car(override var passengers: Int) : Transport(), Driveable {
+class Car(val passengersCount: Int) : Transport(passengersCount) {
 
     override fun drive() {
         println("Driving a car with a speed of light! $passengers passengers on board.")
@@ -32,7 +25,7 @@ class Car(override var passengers: Int) : Transport(), Driveable {
 
 // TODO 1: Write your own class Bus, that behaves the same as the one from Workshop 4
 //  However, instead of implementing it from scratch, make it in a way to extend Transport class
-//  and implement Driveable interface
+
 // class Bus ...
 
 // TODO 2: Create a new interface that will be appropriate for several classes above,

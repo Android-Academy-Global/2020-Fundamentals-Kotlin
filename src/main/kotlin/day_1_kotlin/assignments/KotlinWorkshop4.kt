@@ -2,7 +2,7 @@ package day_1_kotlin.assignments
 
 // Workshop #4 - classes
 
-// TODO 1: Declare a class Bus that will have integer amount of passengers as a field
+// TODO 1: Declare a class Bus that will have integer amount of "passengersCount" as a field
 //class ...(...) {
 //
 // TODO 2: declare method "drive" without arguments that will print "Driving n passengers to the destination
