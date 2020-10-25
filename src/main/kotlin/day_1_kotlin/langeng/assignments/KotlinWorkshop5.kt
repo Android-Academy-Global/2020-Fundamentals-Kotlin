@@ -2,6 +2,7 @@ package day_1_kotlin.langeng.assignments
 
 // Workshop #5 - inheritance, abstract, interface
 
+// Don't touch! Given:
 // Declare a contract for a transport ability.
 interface Driveable {
     fun drive()
@@ -23,10 +24,15 @@ class Bicycle: Transport(1) {
 /* Exercise area */
 
 // TODO 1: Create a new interface that will be appropriate for new classes below.
+// ? By convention, you have to name Classes and Interfaces with first upper case letter.
+// In "camelCase" format: "someLongClassName".
 //interface ...
 
 // TODO 2: Write your own class Bus and some Car.
 //  Instead of writing it from scratch, extend it from the Transport class and your new interface.
+// ? Class can extends only one other class, but implements many interfaces, i.e.:
+// class Kitty(): Cat, Cuteable, Sleepable, Furryable {}
+
 //class Bus ...
 //class Car ...
 

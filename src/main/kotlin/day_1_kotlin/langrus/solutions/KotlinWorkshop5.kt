@@ -2,16 +2,17 @@ package day_1_kotlin.langrus.solutions
 
 // Workshop #5 - inheritance, abstract, interface
 
-// Declare a contract for a transport ability.
+// Не исправляй! Дано:
+// Объявляем контракт, представляющий некое свойство транспорта.
 interface Driveable {
     fun drive()
 }
 
-// Declare a transport class which describes passenger transport of all types.
-// Give this transport an ability to drive.
+// Объявляем класс пассажирского транспорта вцелом.
+// Придадим такому транспорту свойство перемещаться под управлением водителя.
 abstract class Transport(protected var passengersCount: Int): Driveable
 
-// Create a Bicycle transport which can carry a single person.
+// Создадим реальный транспорт: "Велосипед". Он может управляться водителем и перевозит одного пассажира.
 class Bicycle: Transport(1) {
     override fun drive() {
         println("Ride a bicycle.")
@@ -20,16 +21,21 @@ class Bicycle: Transport(1) {
 
 
 
-/* Exercise area */
+/* Рабочая зона */
 
-// TODO 1: Create a new interface that will be appropriate for new classes below.
+// TODO 1: Создай свой интерфейс - контракт, который бы также подошел по смыслу классу транспорт.
+//  См. ниже.
+// ? Имена классов и файлов Котлин принято называть с заглавной буквы, в формате "camelCase": "someLongClassName".
 interface Fuelable {
     fun isFull(): Boolean
     fun fuel()
 }
 
-// TODO 2: Write your own class Bus and some Car.
-//  Instead of writing it from scratch, extend it from the Transport class and your new interface.
+// TODO 2: Создай свои собственные классы, например "Bus" и "Car".
+//  Эти классы не будут полностью написаны с нуля, они должны расширять общий класс "Transport",
+//  и дополнительно реализовывать придуманный тобой интерфейс.
+// ? Класс может наследовать только один класс, но реализовывать несколько интерфейсов, например:
+// class Kitty(): Cat, Cuteable, Sleepable, Furryable {}
 class Bus(passengersCount: Int): Transport(passengersCount), Fuelable {
 
     private var hasFuel = false
@@ -52,8 +58,9 @@ class Bus(passengersCount: Int): Transport(passengersCount), Fuelable {
     }
 }
 
-// TODO 2: Write your own class Bus and some Car.
-//  Instead of writing it from scratch, extend it from the Transport class and your new interface.
+// TODO 2: Создай свои собственные классы, например "Bus" и "Car".
+//  Эти классы не будут полностью написаны с нуля, они должны расширять общий класс "Transport",
+//  и дополнительно реализовывать придуманный тобой интерфейс.
 class Car(passengersCount: Int): Transport(passengersCount), Fuelable {
 
     private var hasFuel = false
@@ -76,10 +83,10 @@ class Car(passengersCount: Int): Transport(passengersCount), Fuelable {
     }
 }
 
-// TODO 3: Test your transport in appropriate sections
+// TODO 3: Протестируй работоспособность твоего транспорта.
 object VehiclesTest {
 
-    // You can run the main function to test the code
+    // Запусти исполнение main() функции, для выполнения кода.
     @JvmStatic
     fun main(args: Array<String>) {
         testBus()
@@ -113,9 +120,11 @@ object VehiclesTest {
 
 
 
-    /* Exercise bonus area */
+    /* Бонусные задания */
 
-    // TODO 4: Test bus abilities as separate features.
+    // TODO 4: Протестируй агрегаты автобуса, как независимые компоненты.
+    //  Т.е. каждый набор независимых свойств - отдельно, чтобы в тестируемой сущности были скрыты все свойства,
+    //  не принадлежащие к данному набору.
     private fun testBusParts() {
         val bus = Bus(0)
 
