@@ -11,6 +11,8 @@ object KotlinWorkshop2 {
     @JvmStatic
     fun main(args: Array<String>) {
 
+
+
         /* Exercise area */
 
         // Initializing variables in runtime with input.
@@ -71,7 +73,6 @@ object KotlinWorkshop2 {
             //  else don't add anything.
             //  Use "When" operator.
             when (userInput) {
-                in 1..4, in 6..8 -> numbersArray.set(counter, userInput)
                 3 -> numbersArray.set(counter, userInput)
                 5 -> numbersArray.set(counter, userInput * size)
                 9 -> numbersArray.set(counter, 2 + size)

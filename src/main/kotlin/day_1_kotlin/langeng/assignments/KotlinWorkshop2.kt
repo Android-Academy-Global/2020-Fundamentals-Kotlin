@@ -11,6 +11,8 @@ object KotlinWorkshop2 {
     @JvmStatic
     fun main(args: Array<String>) {
 
+
+
         /* Exercise area */
 
         // Initializing variables in runtime with input.
@@ -62,6 +64,8 @@ object KotlinWorkshop2 {
             when {
 
             }
+
+            counter++
         }
 
         // TODO 5: Print line by line elements of numbersArray with their indexes.

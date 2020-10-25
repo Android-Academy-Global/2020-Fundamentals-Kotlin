@@ -7,29 +7,32 @@ import kotlin.random.Random
 
 object KotlinWorkshop2 {
 
-    // You can run the main function to test the code
+    // Запусти исполнение main() функции, для выполнения кода.
+    // См. подробнее в /../info/B_HowToRunProgram
     @JvmStatic
     fun main(args: Array<String>) {
 
-        /* Exercise area */
 
-        // Initializing variables in runtime with input.
-        // While running the program. Look at the console. Click inside the console window. Input a number.
-        // Don't touch! Given:
+
+        /* Рабочая зона */
+
+        // Когда программа запущена, ввод с клавиатуры ожидается внизу, во вкладке RUN.
+        // Кликни в зоне открытого окна и введи строку.
+        // Не исправляй! Дано:
         val upperBound = getUpperBound()
         val nonNullUpperBound = upperBound ?: 10
         val randomNumber = Random.nextInt(nonNullUpperBound)
         val scanner = Scanner(System.`in`)
 
         while (true) {
-            // TODO 1: Add logic for comparing userInput with randomNumber with If-Else operator.
-            //  Break infinite while loop when user input correct number. Show message "Congratulations"
-            //  If user entered number below randomNumber - show message "Your Guess is Lower"
-            //  if user entered number over randomNumber - show message "Your Guess is Higher"
+            // TODO 1: Напиши логику сравнения "userInput" с "randomNumber" используя If-Else выражение.
+            //  Когда ввод с клавиатуры равен значению "randomNumber", прерви бесконечный цикл while
+            //  используя ключевое слово "break" и выведи сообщение "Congratulations!"
+            //  Если введено число меньше "randomNumber", выведи сообщение "Your Guess is higher, continue."
+            //  Если введено число больше "randomNumber", выведи сообщение "Your Guess is higher, continue."
 
             print("Input a number in range 0..$nonNullUpperBound inclusive: ")
-            // Storing user input in userInput variable
-            // While running the program. Look at the console. Click inside the console window. Input a number.
+            // Сохраняем введённое с клавиатуры число в "userInput".
             val userInput: Int = scanner.nextInt()
             if (true) {
 
@@ -38,14 +41,14 @@ object KotlinWorkshop2 {
 
 
 
-        /* Exercise bonus area */
+        /* Бонусные задания */
 
-        // TODO 2: Uncomment. Initialize "numbersArray".
-        //  It should be an array of Int with capacity = 5.
+        // TODO 2: Раскомментируй. Проинициализируй "numbersArray".
+        //  "numbersArray" это массив целочисленных значений, длинной 5 чисел.
 //        val numbersArray =
 
-        // TODO 3: Uncomment. Initialize "size".
-        //  Change infinite while-loop condition. Limit user input with a size of "numbersArray".
+        // TODO 3: Раскомментируй. Проинициализируй свойство "size" длинной массива "numbersArray".
+        //  Измени условия повтора бесконечного цикла while так, чтобы он стал конечным и выполнился не более "size" раз.
         println("\nTraining 2. \"Fill in the collection\"")
 //        val size =
         var counter = 0
@@ -53,25 +56,27 @@ object KotlinWorkshop2 {
             print("Input a number in range 0..10 inclusive: ")
             val userInput: Int = scanner.nextInt()
 
-            // TODO 4: Add inputs to the "numbersArray" using the following logic:
-            //  if userInput is 3 - add this 3 number "as is".
-            //  if userInput is 5 - add 5 * size of numbersArray.
-            //  if userInput is 9 - add 2 + size of numbersArray.
-            //  else don't add anything.
-            //  Use "When" operator.
+            // TODO 4: Сохрани и добавь введённые с клавиатуры числа в массив "numbersArray" согласно следующей логики:
+            //  - Если введено 3 - добавь число в массив без изменений;
+            //  - Если введено 5 - умнож и добавь (5 * size);
+            //  - Если введено 9 - сложи и добавь (2 + size);
+            //  - Иначе не добавляй ничего.
+            //  Используй выражение "When".
             when {
 
             }
+
+            counter++
         }
 
-        // TODO 5: Print line by line elements of numbersArray with their indexes.
-        //  Should looks like "index value".
+        // TODO 5: Выведи в консоль значения элементов массива и индекс, на котором они находятся.
+        //  Новый элемент на новой строке. Это должно выглядеть как "index value".
 
     }
 
 
 
-    /* DO NOT TOUCH the utils below. */
+    /* Для корректного прогона воркшопа, не модифицируй утилиты ниже */
 
     private fun getUpperBound(): Int? {
         println("Training 1. \"Guess a number\"")
