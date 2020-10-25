@@ -58,7 +58,7 @@ object KotlinWorkshop1 {
 //        val firstIntInput: Int? = MyScanner.scan.nextInt() // <--- number input 1
 //        print("Please, input a second number: ")
 //        val secondIntInput: Int? = MyScanner.scan.nextInt() // <--- number input 2
-//        val sumIntInputs : Int? = firstIntInput?.plus(secondIntInput ?: notNullAlternative) // <--- replace 'null' with correct expression
+//        val sumIntInputs : Int? = firstIntInput?.plus(secondIntInput ?: null) // <--- replace 'null' with correct expression
 //        println("String:$stringInput, Summ of numbers:$sumIntInputs")
 
 
