@@ -9,17 +9,33 @@ object KotlinWorkshop7 {
 
         // Не исправляй! Дано:
         val poem = arrayOf(
-            "The", "leaves", "are", "falling",
-            "One", "by", "one",
-            "Summer’s", "over",
-            "School’s", "begun"
+            "Истинное счастье доступно",
+            "Лишь только тогда, когда всё хорошо",
+            "Я не верю что добро существует",
+            "На самом деле",
+            "Реальность",
+            "Определяет",
+            "Восприятие",
+            "Ничто мне неподвластно",
+            "И я никогда не скажу что",
+            "Сегодня был прекрасный день"
         )
 
 
 
         /* Рабочая зона */
 
-        // TODO 1: Раскомментируй.
+        // TODO 1: Распечатай "poem" в двух вариантах:
+        //  1. Только отфильтрованные строки длиной короче 12 символов;
+        //  2. Все строки в обратном порядке.
+        val filtered = poem.filter { it.length < 12 }
+        val reversed = poem.reversed()
+        println("\nFiltered: $filtered")
+        println("\nReversed:")
+        reversed.forEach { println(it) }
+        println("\n")
+
+        // TODO 2: Раскомментируй.
         //  Инициализируй переменную с коллекцией чисел "evenList"
         //  и добавь в неё только чётные числа в диапазоне от 0 до 50, включая 0.
         val evenList = mutableListOf<Int>()
@@ -27,15 +43,6 @@ object KotlinWorkshop7 {
             evenList.add(i)
         }
         println("\nEven numbers: $evenList")
-
-        // TODO 2: Распечатай "poem" в двух вариантах:
-        //  1. Только отфильтрованные слова длиной короче 5 символов;
-        //  2. Все слова в обратном порядке.
-        val filtered = poem.filter { it.length < 5 }
-        val reversed = poem.reversed()
-        println("\nFiltered: $filtered")
-        println("\nReversed: $reversed")
-        println("\n")
 
 
 
