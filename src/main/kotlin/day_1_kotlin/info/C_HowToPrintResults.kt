@@ -1,5 +1,7 @@
 package day_1_kotlin.info
 
+import java.util.logging.Logger
+
 object C_HowToPrintResults {
 
     // To see results in the console use some Standard output and/or logger classes in the Sdk.
@@ -25,6 +27,13 @@ object C_HowToPrintResults {
             |formatted
             |message
         """.trimIndent())
+
+        try {
+            // Code with error
+        } catch (expected: Exception) {
+            val log = Logger.getLogger("MyWorkshopLogger")
+            log.throwing("Current class name", "someMethod()", expected)
+        }
     }
 
     class Results {
