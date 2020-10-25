@@ -10,7 +10,7 @@ package day_1_kotlin.langeng.assignments
 // data class VideoGame(...)
 
 // TODO 2: Create on object that will be used to test the games, call it "VideoGamesTest".
-// ... {
+// ... VideoGamesTest {
 
       // Uncomment after declaring an object.
 //    @JvmStatic
@@ -38,7 +38,7 @@ package day_1_kotlin.langeng.assignments
 /* Exercise bonus area */
 
 // TODO 6: Create an enum class Genre with a few values, and add it as a field to the VideoGame.
-//  Fix created video game instances in the main() function.
+//  Fix created video game instances in the main() function and run main().
 /*
 ... Genre {
     ...,
@@ -47,6 +47,7 @@ package day_1_kotlin.langeng.assignments
 }
 * */
 
-// TODO 7: Add a new property to the VideoGameClass with default value.
+// TODO 7: Add a new property to the VideoGame class with default value.
 //  As you can see, you don't have to fix already created instances.
+//  But you have to remember that this can change a behaviour of instances in some cases.
 //  Run program and see new print results.

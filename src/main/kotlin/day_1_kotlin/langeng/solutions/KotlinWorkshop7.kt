@@ -1,6 +1,7 @@
 package day_1_kotlin.langeng.solutions
 
 // Workshop #7 - list, mutable list, useful functions, maps
+
 object KotlinWorkshop7 {
 
     @JvmStatic
@@ -37,16 +38,18 @@ object KotlinWorkshop7 {
 
 
 
-        /* Exercise bonus area */
-
+        // Don't touch! Given:
         val weatherMap = mutableMapOf(
             "Moscow" to 2,
             "St. Petersburg" to -1,
             "Minsk" to 4
         )
 
+
+
+        /* Exercise bonus area */
+
         // TODO 3. Add a weather for Kiev and Tel-Aviv to weatherMap.
-        // Map contains pairs of <Key, Value> where key is an index.
         weatherMap["Kiev"] = 6
         weatherMap["Tel-Aviv"] = 20
 

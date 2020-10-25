@@ -61,6 +61,7 @@ enum class Genre {
     ACTION
 }
 
-// TODO 7: Add a new property to the VideoGameClass with default value.
+// TODO 7: Add a new property to the VideoGame class with default value.
 //  As you can see, you don't have to fix already created instances.
+//  But you have to remember that this can change a behaviour of instances in some cases.
 //  Run program and see new print results.
