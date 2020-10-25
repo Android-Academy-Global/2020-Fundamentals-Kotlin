@@ -37,7 +37,7 @@ object KotlinWorkshop2 {
 
 
 
-        /* Exercise advanced area */
+        /* Exercise bonus area */
 
         // TODO 2: Uncomment. Initialize "numbersArray".
         //  It should be an array of Int with capacity = 5.
