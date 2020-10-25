@@ -1,6 +1,5 @@
 package day_1_kotlin.assignments
 
-import day_1_kotlin.solutions.KotlinWorkshop3
 import java.util.*
 import java.util.logging.Logger
 import kotlin.random.Random
@@ -56,8 +55,9 @@ object KotlinWorkshop3 {
 
 
 
-    /* Exercise advanced area */
+    /* Exercise bonus area */
 
+    // TODO (bonus): print every element of guesses in separate line via .forEach high-level function.
     // Create analytics system for the game. Collect stats and print.
     private fun printGameStats(guesses: IntArray, randomNumber: Int) {
         // TODO 3: Uncomment. Print total guesses count.

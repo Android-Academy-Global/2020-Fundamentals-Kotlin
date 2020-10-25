@@ -29,7 +29,7 @@ object KotlinWorkshop1 {
 
 
 
-        /* Exercise advanced area */
+        /* Exercise bonus area */
 
         // If first number is null, result should be null. If second one is null, result should be equal to first number
         // use one safe call operation and one elvis operator in operation
