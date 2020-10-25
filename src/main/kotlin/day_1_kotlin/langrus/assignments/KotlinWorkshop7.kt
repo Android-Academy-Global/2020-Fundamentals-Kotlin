@@ -7,7 +7,7 @@ object KotlinWorkshop7 {
     @JvmStatic
     fun main(args: Array<String>) {
 
-        // Don't touch! Given:
+        // Не исправляй! Дано:
         val poem = arrayOf(
             "The", "leaves", "are", "falling",
             "One", "by", "one",
@@ -17,10 +17,11 @@ object KotlinWorkshop7 {
 
 
 
-        /* Exercise area */
+        /* Рабочая зона */
 
-        // TODO 1: Uncomment.
-        //  Initialize an evenList variable and add to it only "even" numbers from 0 to 50.
+        // TODO 1: Раскомментируй.
+        //  Инициализируй переменную с коллекцией чисел "evenList"
+        //  и добавь в неё только чётные числа в диапазоне от 0 до 50, включая 0.
         /*
         val evenList = ...
         for (i in 0..50) {
@@ -28,9 +29,9 @@ object KotlinWorkshop7 {
         println(evenList)
         */
 
-        // TODO 2: Print the "poem" for 2 cases:
-        //  1. Filter and print words shorter than 5 symbols;
-        //  2. Print poem reversed.
+        // TODO 2: Распечатай "poem" в двух вариантах:
+        //  1. Только отфильтрованные слова длиной короче 5 символов;
+        //  2. Все слова в обратном порядке.
         /*
         val filtered = ...
         val reversed = ...
@@ -40,19 +41,22 @@ object KotlinWorkshop7 {
 
 
 
-        /* Exercise bonus area */
-
+        // Не исправляй! Дано:
         val weatherMap = mapOf(
             "Moscow" to 2,
             "St. Petersburg" to -1,
             "Minsk" to 4
         )
 
-        // TODO 3. Add a weather for Kiev and Tel-Aviv to weatherMap.
+
+
+        /* Бонусные задания */
+
+        // TODO 3. В погодную карту "weatherMap" добавь погоду в "Kiev" и в "Tel-Aviv".
 //        weatherMap... =
 
-        // TODO 4. Filter and print cities with temperature of zero+.
-        //  Connect operators as a chain.
+        // TODO 4. Отфильтруй и выведи в консоль города с погодой выше +0С.
+        //  Вызывай операторы один за другим, в виде "цепи" (chaining operators).
 //        weatherMap
     }
 }

@@ -4,28 +4,28 @@ package day_1_kotlin.langrus.assignments
 
 
 
-/* Exercise area */
+/* Рабочая зона */
 
-// TODO 1: Add 2-4 properties to the data class
+// TODO 1: Добавь в data class 2-4 свойства.
 // data class VideoGame(...)
 
-// TODO 2: Create on object that will be used to test the games, call it "VideoGamesTest".
-// ... {
+// TODO 2: Создай объект "VideoGamesTest", который будет использоваться для тестирования игр.
+// ... VideoGamesTest {
 
-      // Uncomment after declaring an object.
+      // Раскомментируй после объявления объекта.
 //    @JvmStatic
 //    fun main(args: Array<String>)  {
-        // TODO 3: Create an instance of VideoGame.
-        //  Make a copy via .copy() method and store the copy to another variable.
+        // TODO 3: Создай экземпляр класса "VideoGame".
+        //  Создай копию игры с помощью функции ата класса ".copy()", сохрани копию в другой переменной.
         // val game =
         // val copy =
 
-        // TODO 4: Print out if those data class objects are equal.
-        //  Use "==" to compare. Should be true.
+        // TODO 4: Выведи в консоль результат сравнения игры и её копии, используя оператор сравнения "==".
+        //  Результат должен быть типа Boolean "true".
 //        val equal = false
 //        println("Objects are equal $equal")
 
-        // TODO 5: Put several data class objects into an array and print them out.
+        // TODO 5: Создай массив игр. В момент создания, наполни его несколькими играми и массив в консоль.
 //        val games = arrayOf(game, copy, ...)
 //        games.forEach {
 //            // print
@@ -35,10 +35,12 @@ package day_1_kotlin.langrus.assignments
 
 
 
-/* Exercise bonus area */
+/* Бонусные задания */
 
-// TODO 6: Create an enum class Genre with a few values, and add it as a field to the VideoGame.
-//  Fix created video game instances in the main() function.
+// TODO 6: Создай "enum class", назови его "Genre", добавь в него несколько вариантов значений.
+//  Добавь его, как новое свойство класса "VideoGame".
+//  Поправь созданные сущности видеоигр в коде коде воркшопа.
+//  Запусти выполнение функции "main()" и посмотри результат.
 /*
 ... Genre {
     ...,
@@ -47,6 +49,7 @@ package day_1_kotlin.langrus.assignments
 }
 * */
 
-// TODO 7: Add a new property to the VideoGameClass with default value.
-//  As you can see, you don't have to fix already created instances.
-//  Run program and see new print results.
+// TODO 7: Добавь новое свойство класса "VideoGame", присвой ему значение "по-умолчанию".
+//  Как ты можешь убедиться, новое свойство со значением "по-умолчанию" не требует делать исправлений в таком коде.
+//  Но надо помнить, что поведение созданных сущностей может измениться.
+//  Запусти выполнение функции "main()" и посмотри результат.

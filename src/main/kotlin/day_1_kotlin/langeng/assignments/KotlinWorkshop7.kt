@@ -39,13 +39,16 @@ object KotlinWorkshop7 {
 
 
 
-        /* Exercise bonus area */
-
+        // Don't touch! Given:
         val weatherMap = mapOf(
             "Moscow" to 2,
             "St. Petersburg" to -1,
             "Minsk" to 4
         )
+
+
+
+        /* Exercise bonus area */
 
         // TODO 3. Add a weather for Kiev and Tel-Aviv to weatherMap.
 //        weatherMap... =
