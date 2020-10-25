@@ -92,7 +92,7 @@ object KotlinWorkshop2 {
 
 
 
-    /* Для корректного прогона воркшопа, не модифицируй утилиты ниже */
+    /* Для корректного прогона воркшопа не модифицируй утилиты ниже */
 
     private fun getUpperBound(): Int? {
         println("Training 1. \"Guess a number\"")

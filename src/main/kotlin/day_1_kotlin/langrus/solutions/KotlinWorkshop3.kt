@@ -8,12 +8,13 @@ import kotlin.random.Random
 
 object KotlinWorkshop3 {
 
-    // You can run the main function to test the code
+    // Запусти исполнение main() функции, для выполнения кода.
+    // См. подробнее в /../info/B_HowToRunProgram
     @JvmStatic
     fun main(args: Array<String>) {
-        // Initializing variables in runtime with input.
-        // While running the program. Look at the console. Click inside the console window. Input a number.
-        // Don't touch! Given:
+
+        // Когда программа запущена, ввод с клавиатуры ожидается внизу, во вкладке RUN.
+        // Не исправляй! Дано:
         val scanner = Scanner(System.`in`)
         val upperBound = getUpperBound(scanner)
         val nonNullUpperBound = upperBound ?: 10
@@ -23,33 +24,36 @@ object KotlinWorkshop3 {
 
 
 
-        /* Exercise area */
+        /* Рабочая зона */
 
         var guessed = false
         var index = 0
         while (!guessed && index < capacity) {
             print("Input a number in range 0..$nonNullUpperBound inclusive: ")
-            // Storing user input in userInput variable
-            // While running the program. Look at the console. Click inside the console window. Input a number.
+            // Когда программа запущена, ввод с клавиатуры ожидается внизу, во вкладке RUN.
             val userInput: Int = getNextInput(scanner, nonNullUpperBound)
             guesses[index] = userInput
 
-            // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
+            // TODO 1: Раскомментируй.
+            //  Объяви функцию "playRound": она должна принимать на вход два Int аргумента и возвращать Boolean.
+            //  См. ниже.
             guessed = playRound(userInput, randomNumber)
 
             index++
         }
 
-        // TODO (bonus): Create analytics system for the game. Collect stats and print.
+        // TODO (bonus): Напиши аналитическцую систему для игрового раунда,
+        //  которая будет собирать статистику и печатать результат. См. ниже.
         printGameStats(guesses, randomNumber)
     }
 
-    // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
-    // TODO 2: Add logic for comparing userInput with randomNumber with If-Else operator.
-    //  Break infinite while loop when user input correct number. Show message "Congratulations"
-    //  If user entered number below randomNumber - show message "Your Guess is Lower"
-    //  if user entered number over randomNumber - show message "Your Guess is Higher".
-    //  See workshop #2
+    // TODO 1: Раскомментируй.
+    //  Объяви функцию "playRound": она должна принимать на вход два Int аргумента и возвращать Boolean.
+    // TODO 2: Функция возвращает "true" и выводит сообщение "Congratulations!",
+    //  когда ввод с клавиатуры равен значению "randomNumber";
+    //  Если введено число больше "randomNumber", выведи сообщение "Your Guess is higher, continue." и верни false;
+    //  Если введено число меньше "randomNumber", выведи сообщение "Your Guess is lower, continue." и верни false.
+    //  Можно использовать наработки из workshop 2, с отличием, что здесь это вынесенная функция, нет цикла и возвращает результат.
     private fun playRound(userInput: Int, randomNumber: Int): Boolean {
         when {
             userInput == randomNumber -> {
@@ -69,23 +73,26 @@ object KotlinWorkshop3 {
 
 
 
-    /* Exercise bonus area */
+    /* Бонусные задания */
 
-    // TODO (bonus): Create analytics system for the game. Collect stats and print.
+    // TODO (bonus): Напиши аналитическцую систему для игрового раунда,
+    //  которая будет собирать статистику и печатать результат. См. ниже.
     private fun printGameStats(guesses: IntArray, randomNumber: Int) {
-        // TODO 3: Uncomment. Print total guesses count.
+        // TODO 3: Раскомментируй. Выведи общее число попыток ввода.
         printTotalCountOfArray(guesses)
 
-        // TODO 4: Uncomment.
-        //  Add high level function "countHigherGuesses" for printing higher elements from array.
+        // TODO 4: Раскомментируй.
+        //  Напиши функцию высшего порядка "countHigherGuesses" для вывода всех попыток воода, которые оказались выше "randomNumber".
+        //  Функция должна возвращать число таких попыток как результат.
         guesses.countHigherGuesses(guesses, randomNumber)
 
-        // TODO 5: Uncomment.
-        //  Create lambda function "countLowerGuesses" for printing lower elements from array.
+        // TODO 5: Раскомментируй.
+        //  Напиши lambda-выражение "countLowerGuesses" для вывода всех попыток воода, которые оказались ниже "randomNumber".
         countLowerGuesses(guesses, randomNumber)
 
-        // TODO 6: Uncomment.
-        //  Print every element of guesses in separate line via .forEach high-level function.
+        // TODO 6: Раскомментируй.
+        //  Выведи результаты всех попыток ввода, строка за строкой.
+        //  Используй функцию высшего порядка ".forEach".
         println("All guesses:")
         guesses.forEach {
             print("$it, ")
@@ -93,14 +100,11 @@ object KotlinWorkshop3 {
     }
 
     // TODO 3
-    // Should print total guesses count.
     private fun printTotalCountOfArray(guesses: IntArray) {
         println("\nTotal count: ${guesses.size}\n")
     }
 
     // TODO 4
-    // Should count and print guesses that were higher than randomNumber.
-    // Should return count as fun result.
     private fun IntArray.countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
         var counter = 0
         for (guess in guesses) {
@@ -116,7 +120,6 @@ object KotlinWorkshop3 {
     }
 
     // TODO 5
-    // Should count and print guesses that were lower than randomNumber.
     val countLowerGuesses: (IntArray, Int) -> Unit = { guesses, randomNumber ->
         var counter = 0
         for (guess in guesses) {
@@ -131,7 +134,7 @@ object KotlinWorkshop3 {
 
 
 
-    /* DO NOT TOUCH the utils below. */
+    /* Для корректного прогона воркшопа не модифицируй утилиты ниже */
 
     private fun getUpperBound(scanner: Scanner): Int? {
         val upperLimit = 20

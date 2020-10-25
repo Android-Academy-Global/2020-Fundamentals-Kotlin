@@ -7,3 +7,5 @@ Package `assignments` contains tasks divided in workshop files.
 Package `solutions` contains... solutions! :)
 
 Package `info` contains simple help for students: how to comment, run and print code.
+
+Packages grouped by languages: `langeng` contains workshops with description in English, `langrus` in Russian. Content is similar.
