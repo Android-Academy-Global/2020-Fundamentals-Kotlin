@@ -26,7 +26,7 @@ object KotlinWorkshop2 {
             //  If user entered number below randomNumber - show message "Your Guess is Lower"
             //  if user entered number over randomNumber - show message "Your Guess is Higher"
 
-            print("Input a number in range 0..$upperBound inclusive: ")
+            print("Input a number in range 0..$nonNullUpperBound inclusive: ")
             // Storing user input in userInput variable
             // While running the program. Look at the console. Click inside the console window. Input a number.
             val userInput: Int = scanner.nextInt()
@@ -50,7 +50,9 @@ object KotlinWorkshop2 {
         //  It should be an array of Int with capacity = 5.
         val numbersArray = intArrayOf(0, 0, 0, 0, 0)
         println("\nGiven numbersArray:")
-        printArray(numbersArray)
+        for ((index, number) in numbersArray.withIndex()){
+            println("$index $number")
+        }
 
         // TODO 3: Uncomment. Initialize "size".
         //  Change infinite while-loop condition. Limit user input with a size of "numbersArray".
@@ -80,7 +82,9 @@ object KotlinWorkshop2 {
 
         // TODO 5: Print line by line elements of numbersArray with their indexes.
         //  Should looks like "index value".
-        printArray(numbersArray)
+        for ((index, number) in numbersArray.withIndex()){
+            println("$index $number")
+        }
     }
 
 
@@ -96,12 +100,6 @@ object KotlinWorkshop2 {
 
         } catch (e: InputMismatchException) {
             null
-        }
-    }
-
-    private fun printArray(numbersArray: IntArray) {
-        for ((index, number) in numbersArray.withIndex()){
-            println("$index $number")
         }
     }
 }

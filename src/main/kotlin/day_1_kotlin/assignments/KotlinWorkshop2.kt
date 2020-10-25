@@ -4,7 +4,6 @@ import java.util.*
 import kotlin.random.Random
 
 // Workshop #2 - control flow (if, when), arrays, for loop, if expression, return & jumps
-
 object KotlinWorkshop2 {
 
     // You can run the main function to test the code
@@ -27,7 +26,7 @@ object KotlinWorkshop2 {
             //  If user entered number below randomNumber - show message "Your Guess is Lower"
             //  if user entered number over randomNumber - show message "Your Guess is Higher"
 
-            print("Input a number in range 0..$upperBound inclusive: ")
+            print("Input a number in range 0..$nonNullUpperBound inclusive: ")
             // Storing user input in userInput variable
             // While running the program. Look at the console. Click inside the console window. Input a number.
             val userInput: Int = scanner.nextInt()
