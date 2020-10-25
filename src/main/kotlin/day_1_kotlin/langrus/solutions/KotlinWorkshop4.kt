@@ -4,7 +4,7 @@ package day_1_kotlin.langrus.solutions
 
 object KotlinWorkshop4 {
 
-    // Don't touch! Given:
+    // Не исправляй! Дано:
     @JvmStatic
     fun main(args: Array<String>) {
         testBus()
@@ -12,25 +12,25 @@ object KotlinWorkshop4 {
 
 
 
-    /* Exercise area */
+    /* Рабочая зона */
 
-    // TODO 1: Declare a class Bus that will have integer amount of "passengersCount" as a property.
-    // ? Classes should be declared in the bottom of a file. Below functions.
-    // There is an exception. We sort declarations by TODOs.
+    // TODO 1: Объяви класс "Bus" который в качестве аргумента будет получать число "passengersCount".
+    // ? Хорошим тоном считается объявлять классы и интерфейсы внизу файла, под функциями.
+    // Здесь, и в других частях практической работы, классы и функции отсортированы по порядку выполнения заданий.
     class Bus(private val passengersCount: Int) {
 
-        // TODO 2: Add method "drive" without arguments that will print "Driving n passengers to the destination"
-        //  where n - count of passengers.
+        // TODO 2: Добавь функцию "drive", без аргументов.
+        //  Она должна выводить фразу "Driving N passengers to the destination", где N - число пассажиров.
         fun drive() {
             println("Driving $passengersCount passengers to the destination")
         }
     }
 
     private fun testBus() {
-        // TODO 3: Create an instance of your class.
+        // TODO 3: Создайте экземпляр класса "Bus".
         val bus = Bus(10)
 
-        // TODO 4: Drive your bus to the destination and check out that the output is correct.
+        // TODO 4: Отправь автобус к пункту назначения и проверь, что выведется в консоль.
         bus.drive()
     }
 }
