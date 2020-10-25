@@ -4,15 +4,13 @@ import java.util.*
 import java.util.logging.Logger
 import kotlin.random.Random
 
-// Workshop #3 - functions, lambda, filters, high-order function
+// Workshop #3 - functions, filters, lambda, high-order function
+
 object KotlinWorkshop3 {
 
     // You can run the main function to test the code
     @JvmStatic
     fun main(args: Array<String>) {
-
-        /* Exercise area */
-
         // Initializing variables in runtime with input.
         // While running the program. Look at the console. Click inside the console window. Input a number.
         // Don't touch! Given:
@@ -22,6 +20,10 @@ object KotlinWorkshop3 {
         val randomNumber = Random.nextInt(nonNullUpperBound)
         val capacity = nonNullUpperBound
         val guesses = createIntArrayOfCapacity(capacity)
+
+
+
+        /* Exercise area */
 
         var guessed = false
         var index = 0
@@ -38,7 +40,7 @@ object KotlinWorkshop3 {
             index++
         }
 
-        // TODO (bonus): print every element of guesses in separate line via .forEach high-level function.
+        // TODO (bonus): Create analytics system for the game. Collect stats and print.
         printGameStats(guesses, randomNumber)
     }
 
@@ -57,8 +59,7 @@ object KotlinWorkshop3 {
 
     /* Exercise bonus area */
 
-    // TODO (bonus): print every element of guesses in separate line via .forEach high-level function.
-    // Create analytics system for the game. Collect stats and print.
+    // TODO (bonus): Create analytics system for the game. Collect stats and print.
     private fun printGameStats(guesses: IntArray, randomNumber: Int) {
         // TODO 3: Uncomment. Print total guesses count.
 //        printTotalCountOfArray(guesses)
