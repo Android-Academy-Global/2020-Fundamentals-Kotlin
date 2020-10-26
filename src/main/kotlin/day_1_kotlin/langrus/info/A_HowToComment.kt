@@ -1,37 +1,41 @@
 package day_1_kotlin.langrus.info
 
 /**
- * This is Class java-doc.
- * Place cursor onto the class name [A_HowToComment] and press ctrl+Q.
- * You may comment classes, functions, etc.
+ * Такой комментарий называется "java-doc". В него помещают описание классов, функций, полей и т.п.
+ * Чтобы увидеть, есть ли у класса описание, помести курсор на имя нужного класса [A_HowToComment] и зажми Ctrl+Q.
  */
 object A_HowToComment {
 
-    // Commented code ignored by compiler.
+    // Закомментированный код игнорируется компилятором.
 
-    // How to comment:
+    // Как делать комментарии:
 
-    // 1. Use double slash in the beginning of the string. One line comment:
+    // 1. Используй двойной slash "//" символ в начале строки. Это будет однострочный комментарий:
     // val commented = "ignored"
-    // Place cursor on any position in the line 17 and press Ctrl+/
+    // Закомментируй следующую строку. Помести курсор в любом месте строки и зажми комбо "Ctrl+/"
     val plzCommentMe = "null"
 
-    // 2. Surround part of code with /**/
+    // 2. Можно делать контекстные комментарии внутри строк, для этого окружи кусок кода используя /* */
     val commented = /*"ignored"*/ "not ignored"
 
-    // 3a. Surround multiple lines with /**/
+    // Чтобы сделать многострочный комментарий, окружи код с помощью /* */.
+    // Такой коммент может выглядеть по разному, но суть от этого не изменится.
+    // 3a. Вид1
     /*
     * val firstLine = "ignored"
     * val secondLine = "ignored"
     * */
 
-    // 3b. Or like this:
+    // 3b. Вид2
     /*
     val firstLine = "ignored"
     val secondLine = "ignored"
     */
 
-    // 4. These are common reserved words to highlight tasks:
+    // 4. Также, есть специальные слова, зарезервированные для определённого контроля кода. Вот самые распространённые:
+    // Но не стоит ими злоупотреблять, т.к. многие команды разработчиков устанавливают свой code-style
+    // и по-своему реагируют на наличие таких комментов (и комментов вообще).
+    // Также может быть настроена автосборка проекта с учётом наличия таких слов.
     // TODO
     // FIXME
     // i.e. FIXME AuthorName 10/26/2020: have to refactor something

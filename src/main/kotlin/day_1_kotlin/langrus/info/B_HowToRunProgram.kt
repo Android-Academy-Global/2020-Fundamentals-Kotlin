@@ -2,20 +2,20 @@ package day_1_kotlin.langrus.info
 
 object B_HowToRunProgram {
 
-    // The entry point of your code is a "main" function with reserved syntax.
-    // It is a static function.
+    // Точкой входа исполняемой программы является функция "main".
+    // Это статическая функция и она имеет зарезервированный синтаксис.
 
-    // If you start code in an empty file, start typing "ma", end wait.
-    // The intellij idea will suggest you the auto-completion with shortcut "maino".
+    // Внутри класса или объекта, где ещё нет main() функции, начни писать "ma" и подожди.
+    // Среда разработки Intellij Idea предложит тебе авто-дополнить вводимый код с помощью шортката "maino".
 
-    // When you see a suggestion, just press "Enter":
+    // Когда увидишь предложение дополнить код, нажми "Enter":
     @JvmStatic
     fun main(args: Array<String>) {
-        // You may Build and Run program with "Ctrl+Shift+F10".
-        // Or by clicking a green triangle to the left side of the code. See line 13.
+        // Собрать проект и запустить программу можно из верхнего меню "Run", или зажав "Ctrl+Shift+F10".
+        // Или нажав на зелёный треугольник на полях, слева от кода, возле объявления функции main(), см. строку 13.
     }
 
-    // You may run code for a test purposes without writing the "main" function.
-    // Start Kotlin test environment: in the main menu find "Tools -> Kotlin -> Kotlin REPL".
-    // Click in the opened console window. Type your code, press "Ctrl+Enter" to run.
+    // Можно проверить некоторый код, не создавая функции main().
+    // Запусти тестовую среду Котлина: в верхнем меню перейди в "Tools -> Kotlin -> Kotlin REPL".
+    // Кликни в области открывшегося снизу окна консоли. Можешь ввести код там, а для исполнения зажать "Ctrl+Enter".
 }
