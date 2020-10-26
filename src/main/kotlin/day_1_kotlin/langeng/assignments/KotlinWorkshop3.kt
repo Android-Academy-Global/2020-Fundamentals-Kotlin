@@ -4,7 +4,7 @@ import java.util.*
 import java.util.logging.Logger
 import kotlin.random.Random
 
-// Workshop #3 - functions, filters, lambda, high-order function
+// Workshop #3 - functions, lambda, high-order function
 
 object KotlinWorkshop3 {
 
@@ -26,22 +26,22 @@ object KotlinWorkshop3 {
         /* Exercise area */
 
         var guessed = false
-        var index = 0
-        while (!guessed && index < capacity) {
+        var counter = 0
+        while (!guessed && counter < capacity) {
             print("Input a number in range 0..$nonNullUpperBound inclusive: ")
             // Storing user input in userInput variable
             // While running the program. Look at the console. Click inside the console window. Input a number.
             val userInput: Int = getNextInput(scanner, nonNullUpperBound)
-            guesses[index] = userInput
+            guesses[counter] = userInput
 
             // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
 //            guessed = playRound(userInput, randomNumber)
 
-            index++
+            counter++
         }
 
         // TODO (bonus): Create analytics system for the game. Collect stats and print.
-        printGameStats(guesses, randomNumber)
+        printGameStats(guesses, counter, randomNumber)
     }
 
     // TODO 1: Uncomment. Declare playRound function: takes 2 integer arguments and returns a boolean.
@@ -60,15 +60,16 @@ object KotlinWorkshop3 {
     /* Exercise bonus area */
 
     // TODO (bonus): Create analytics system for the game. Collect stats and print.
-    private fun printGameStats(guesses: IntArray, randomNumber: Int) {
+    private fun printGameStats(guesses: IntArray, guessCounter: Int, randomNumber: Int) {
         // TODO 3: Uncomment. Print total guesses count.
-//        printTotalCountOfArray(guesses)
+//        printTotalCountOfGuesses(guessCounter)
 
         // TODO 4: Uncomment.
         //  Add high level function "countHigherGuesses" for printing higher elements from array.
         // guesses.countHigherGuesses(guesses, randomNumber)
 
         // TODO 5: Uncomment. Create lambda function "countLowerGuesses" for printing lower elements from array.
+        //  Do not print element if its value == "-1", the default value given to array on a initializing stage.
         // countLowerGuesses(guesses, randomNumber)
 
         // TODO 6: Uncomment. Print every element of guesses in separate line via .forEach high-level function.
@@ -77,7 +78,7 @@ object KotlinWorkshop3 {
 
     // TODO 3
     // Should print total guesses count.
-    private fun printTotalCountOfArray(guesses: IntArray) {
+    private fun printTotalCountOfGuesses(guessCounter: Int) {
         TODO()
     }
 
@@ -141,10 +142,6 @@ object KotlinWorkshop3 {
     }
 
     private fun createIntArrayOfCapacity(capacity: Int): IntArray {
-        val array = mutableListOf<Int>()
-        for (i in 0 until capacity) {
-            array.add(0)
-        }
-        return array.toIntArray()
+        return IntArray(capacity) { i -> -1 }
     }
 }

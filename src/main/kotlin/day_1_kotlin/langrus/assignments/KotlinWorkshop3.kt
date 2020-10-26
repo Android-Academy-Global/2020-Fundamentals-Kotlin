@@ -4,7 +4,7 @@ import java.util.*
 import java.util.logging.Logger
 import kotlin.random.Random
 
-// Workshop #3 - functions, filters, lambda, high-order function
+// Workshop #3 - functions, lambda, high-order function
 
 object KotlinWorkshop3 {
 
@@ -27,24 +27,24 @@ object KotlinWorkshop3 {
         /* Рабочая зона */
 
         var guessed = false
-        var index = 0
-        while (!guessed && index < capacity) {
+        var counter = 0
+        while (!guessed && counter < capacity) {
             print("Input a number in range 0..$nonNullUpperBound inclusive: ")
             // Когда программа запущена, ввод с клавиатуры ожидается внизу, во вкладке RUN.
             val userInput: Int = getNextInput(scanner, nonNullUpperBound)
-            guesses[index] = userInput
+            guesses[counter] = userInput
 
             // TODO 1: Раскомментируй.
             //  Объяви функцию "playRound": она должна принимать на вход два Int аргумента и возвращать Boolean.
             //  См. ниже.
 //            guessed = playRound(userInput, randomNumber)
 
-            index++
+            counter++
         }
 
         // TODO (bonus): Напиши аналитическцую систему для игрового раунда,
         //  которая будет собирать статистику и печатать результат. См. ниже.
-        printGameStats(guesses, randomNumber)
+        printGameStats(guesses, counter, randomNumber)
     }
 
     // TODO 1: Раскомментируй.
@@ -65,9 +65,9 @@ object KotlinWorkshop3 {
 
     // TODO (bonus): Напиши аналитическцую систему для игрового раунда,
     //  которая будет собирать статистику и печатать результат. См. ниже.
-    private fun printGameStats(guesses: IntArray, randomNumber: Int) {
+    private fun printGameStats(guesses: IntArray, guessCounter: Int, randomNumber: Int) {
         // TODO 3: Раскомментируй. Выведи общее число попыток ввода.
-//        printTotalCountOfArray(guesses)
+//        printTotalCountOfGuesses(guessCounter)
 
         // TODO 4: Раскомментируй.
         //  Напиши функцию высшего порядка "countHigherGuesses" для вывода всех попыток воода, которые оказались выше "randomNumber".
@@ -76,6 +76,7 @@ object KotlinWorkshop3 {
 
         // TODO 5: Раскомментируй.
         //  Напиши lambda-выражение "countLowerGuesses" для вывода всех попыток воода, которые оказались ниже "randomNumber".
+        //  И не равны значению "-1", заданному элементу массива при инициализации массива.
         // countLowerGuesses(guesses, randomNumber)
 
         // TODO 6: Раскомментируй.
@@ -85,7 +86,7 @@ object KotlinWorkshop3 {
     }
 
     // TODO 3
-    private fun printTotalCountOfArray(guesses: IntArray) {
+    private fun printTotalCountOfGuesses(guessCounter: Int) {
         TODO()
     }
 
@@ -146,10 +147,6 @@ object KotlinWorkshop3 {
     }
 
     private fun createIntArrayOfCapacity(capacity: Int): IntArray {
-        val array = mutableListOf<Int>()
-        for (i in 0 until capacity) {
-            array.add(0)
-        }
-        return array.toIntArray()
+        return IntArray(capacity) { i -> -1 }
     }
 }

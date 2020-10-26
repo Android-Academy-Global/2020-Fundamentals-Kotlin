@@ -21,8 +21,9 @@ object KotlinWorkshop1 {
         /* Рабочая зона */
 
         // TODO 1: Раскомментируй.
-        //  Если "nullableElvisString" null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
+        //  Если "nullableElvisString" равно null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
         //  Присвой "notNullUserString" значение из "nullableElvisString". Исправиь присвоение используя Элвис-оператор.
+        //  Исправить присвоение используя Элвис-оператор "?:".
         var notNullUserString: String = nullableElvisString ?: emptyString
         println("Строка результат пустая $notNullUserString")
 

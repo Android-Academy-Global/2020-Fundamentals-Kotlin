@@ -30,9 +30,9 @@ object KotlinWorkshop1 {
 
         /* Exercise area */
 
-        // If "nullableElvisString" is null, "notNullUserString" should be equal to "emptyString".
         // TODO 1: Uncomment.
         //  Assign "nullableElvisString" to the "notNullUserString" and fix the assignment with elvis operator.
+        //  If "nullableElvisString" is null, "notNullUserString" should be equal to "emptyString".
 //        var notNullUserString: String =
 //        println("Result string is empty $notNullUserString")
 
@@ -45,8 +45,8 @@ object KotlinWorkshop1 {
 
         /* Exercise bonus area */
 
-        // If first number is null, result should be null. If second one is null, result should be equal to first number.
         // TODO 3: Uncomment. Assign a sum of two numbers to "sum".
+        //  If first number is null, result should be null. If second one is null, result should be equal to first number.
         //  Use '?' check, '.plus()' function and '?:' to add valid alternative inside '.plus()'.
         val notNullAlternative = 0
         val firstNumber: Int? = 10
