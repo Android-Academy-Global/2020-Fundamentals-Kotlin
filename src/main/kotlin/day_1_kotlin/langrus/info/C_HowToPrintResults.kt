@@ -7,11 +7,11 @@ object C_HowToPrintResults {
     // Для того, чтобы увидеть результат в консоли используйте стандартные методы ввода вывода
     // и/или классы для логирования из SDK: функции print(), println() или logger
 
-    // Консоль находится во вкладке "Run"в нижнем меню Intellij idea.
+    // Консоль находится во вкладке "Run" в нижнем меню Intellij idea.
 
     @JvmStatic
     fun main(args: Array<String>) {
-        println("message") // Сторка
+        println("message") // Строка
         println("message " + "other") // Конкатенация строк
         println("message " + 1) // Конкатенация разных объектов
 
