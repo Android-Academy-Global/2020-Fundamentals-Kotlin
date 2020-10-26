@@ -4,21 +4,21 @@ import java.util.logging.Logger
 
 object C_HowToPrintResults {
 
-    // To see results in the console use some Standard output and/or logger classes in the Sdk.
-    // Functions print(), println() or logger.
+    // Для того, чтобы увидеть результат в консоли используйте стандартные методы ввода вывода
+    // и/или классы для логирования из SDK: функции print(), println() или logger
 
-    // Console is in the "Run" tab. In the bottom menu of the Intellij idea.
+    // Консоль находится во вкладке "Run" в нижнем меню Intellij idea.
 
     @JvmStatic
     fun main(args: Array<String>) {
-        println("message") // A string
-        println("message " + "other") // A concatenation of strings
-        println("message " + 1) // A concatenation of different objects
+        println("message") // Строка
+        println("message " + "other") // Конкатенация строк
+        println("message " + 1) // Конкатенация разных объектов
 
         val value = "value"
-        println("message $value") // A placeholder
+        println("message $value") // Placeholder - заглушка для вывода результата при написании его напрямую в строке
 
-        println("message ${Results().property}") // A placeholder with calculated result
+        println("message ${Results().property}") // Placeholder с вычисляемым значением
 
         println("message value:" + value + ", property:${Results().property}")
 
@@ -29,7 +29,7 @@ object C_HowToPrintResults {
         """.trimIndent())
 
         try {
-            // Code with error
+            // Код с ошибкой
         } catch (expected: Exception) {
             val log = Logger.getLogger("MyWorkshopLogger")
             log.throwing("Current class name", "someMethod()", expected)
