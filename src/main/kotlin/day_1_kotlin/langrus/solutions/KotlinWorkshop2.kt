@@ -1,9 +1,17 @@
+@file:Suppress(
+    "UNREACHABLE_CODE",
+    "DuplicatedCode",
+    "UNUSED_VARIABLE",
+    "ControlFlowWithEmptyBody",
+    "ConstantConditionIf"
+)
+
 package day_1_kotlin.langrus.solutions
 
 import java.util.*
 import kotlin.random.Random
 
-// Workshop #2 - control flow (if, when), arrays, for loop, if expression, return & jumps
+// Практическая работа #2 - control flow (if, when), arrays, for loop, if expression, return & jumps
 
 object KotlinWorkshop2 {
 
@@ -27,22 +35,22 @@ object KotlinWorkshop2 {
         while (true) {
             // TODO 1: Напиши логику сравнения "userInput" с "randomNumber" используя If-Else выражение.
             //  Когда ввод с клавиатуры равен значению "randomNumber", прерви бесконечный цикл while
-            //  используя ключевое слово "break" и выведи сообщение "Congratulations!"
-            //  Если введено число меньше "randomNumber", выведи сообщение "Your Guess is higher, continue."
-            //  Если введено число больше "randomNumber", выведи сообщение "Your Guess is higher, continue."
+            //  используя ключевое слово "break" и выведи сообщение "Поздравляю! Задуманное число х"
+            //  Если введено число меньше "randomNumber", выведи сообщение "Ваше число меньше задуманного, пожалуйста продолжаем."
+            //  Если введено число больше "randomNumber", выведи сообщение "Ваше число больше задуманного, пожалуйста продолжаем."
 
-            print("Input a number in range 0..$nonNullUpperBound inclusive: ")
+            print("Введите число в диапазоне 0..$nonNullUpperBound включительно: ")
             // Сохраняем введённое с клавиатуры число в "userInput".
             val userInput: Int = scanner.nextInt()
             if (userInput == randomNumber) {
-                println("Congratulation, it was $randomNumber!")
+                println("Поздравляю! Задуманное число равно $randomNumber!")
                 break
 
             } else if (userInput > randomNumber) {
-                println("Your Guess is higher, continue.")
+                println("Ваше число больше задуманного, пожалуйста продолжаем.")
 
             } else {
-                println("Your Guess is lower, continue.")
+                println("Ваше число меньше задуманного, пожалуйста продолжаем.")
             }
         }
 
@@ -53,18 +61,18 @@ object KotlinWorkshop2 {
         // TODO 2: Раскомментируй. Проинициализируй "numbersArray".
         //  "numbersArray" это массив целочисленных значений, длинной 5 чисел.
         val numbersArray = intArrayOf(0, 0, 0, 0, 0)
-        println("\nGiven numbersArray:")
+        println("\nДан массив:")
         for ((index, number) in numbersArray.withIndex()){
             println("$index $number")
         }
 
         // TODO 3: Раскомментируй. Проинициализируй свойство "size" длинной массива "numbersArray".
         //  Измени условия повтора бесконечного цикла while так, чтобы он стал конечным и выполнился не более "size" раз.
-        println("\nTraining 2. \"Fill in the collection\"")
+        println("\nПрограмма 2. \"Введите коллекцию чисел\"")
         val size = numbersArray.size
         var counter = 0
         while (counter < size) {
-            print("Input a number in range 0..10 inclusive: ")
+            print("Введите число в диапазоне 0..10 включительно: ")
             val userInput: Int = scanner.nextInt()
 
             // TODO 4: Сохрани и добавь введённые с клавиатуры числа в массив "numbersArray" согласно следующей логики:
@@ -84,9 +92,9 @@ object KotlinWorkshop2 {
         }
 
         // TODO 5: Выведи в консоль значения элементов массива и индекс, на котором они находятся.
-        //  Новый элемент на новой строке. Это должно выглядеть как "index value".
+        //  Новый элемент на новой строке. Это должно выглядеть как "индекс: значение".
         for ((index, number) in numbersArray.withIndex()){
-            println("$index $number")
+            println("$index: $number")
         }
     }
 
@@ -95,8 +103,8 @@ object KotlinWorkshop2 {
     /* Для корректного прогона воркшопа не модифицируй утилиты ниже */
 
     private fun getUpperBound(): Int? {
-        println("Training 1. \"Guess a number\"")
-        print("Enter maximum number in range 10..20 inclusive: ")
+        println("Программа 1. \"Угадай число\"")
+        print("Введите число максимум в диапазоне 10..20 включительно: ")
         val scanner = Scanner(System.`in`)
         return try {
             scanner.nextInt()

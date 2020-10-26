@@ -1,3 +1,14 @@
+@file:Suppress(
+    "UNREACHABLE_CODE",
+    "DuplicatedCode",
+    "UNUSED_VARIABLE",
+    "ControlFlowWithEmptyBody",
+    "ConstantConditionIf",
+    "RedundantNullableReturnType",
+    "RedundantExplicitType",
+    "unused"
+)
+
 package day_1_kotlin.langeng.solutions
 
 import java.util.*
