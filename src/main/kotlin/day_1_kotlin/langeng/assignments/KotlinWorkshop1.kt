@@ -1,4 +1,13 @@
-@file:Suppress("RedundantNullableReturnType")
+@file:Suppress(
+    "UNREACHABLE_CODE",
+    "DuplicatedCode",
+    "UNUSED_VARIABLE",
+    "ControlFlowWithEmptyBody",
+    "ConstantConditionIf",
+    "RedundantNullableReturnType",
+    "RedundantExplicitType",
+    "unused"
+)
 
 package day_1_kotlin.langeng.assignments
 
