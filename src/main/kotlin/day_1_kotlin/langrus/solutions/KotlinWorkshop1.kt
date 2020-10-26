@@ -20,8 +20,8 @@ object KotlinWorkshop1 {
 
         /* Рабочая зона */
 
-        // Если "nullableElvisString" null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
         // TODO 1: Раскомментируй.
+        //  Если "nullableElvisString" null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
         //  Присвой "notNullUserString" значение из "nullableElvisString". Исправиь присвоение используя Элвис-оператор.
         var notNullUserString: String = nullableElvisString ?: emptyString
         println("Строка результат пустая $notNullUserString")
@@ -35,8 +35,8 @@ object KotlinWorkshop1 {
 
         /* Бонусные задания */
 
-        // Если firstNumber равно null, сумма должна быть null. Если secondNumber равно null, сумма должна быть равна значение firstNumber.
         // TODO 3: Раскомментируй. Сложи две переменные.
+        //  Если firstNumber равно null, сумма должна быть null. Если secondNumber равно null, сумма должна быть равна значение firstNumber.
         //  Используй проверку на null '?', для сложения используй функцию '.plus()'. Внутри '.plus()' используй '?:'.
         val notNullAlternative = 0
         val firstNumber: Int? = 10
