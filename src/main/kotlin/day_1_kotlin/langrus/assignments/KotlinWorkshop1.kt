@@ -31,7 +31,7 @@ object KotlinWorkshop1 {
 
         // TODO 1: Раскомментируй.
         //  Присвой "notNullUserString" значение из "nullableElvisString".
-        //  Если "nullableElvisString" равно null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
+        //  Если "nullableElvisString" равно null, сделай значение "notNullUserString" равным значению пустой строки "emptyString".
         //  Исправить присвоение используя Элвис-оператор "?:".
 //        var notNullUserString: String =
 //        println("Строка результат равна $notNullUserString")
