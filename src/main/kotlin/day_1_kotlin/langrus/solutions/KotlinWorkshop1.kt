@@ -1,4 +1,4 @@
-@file:Suppress("RedundantNullableReturnType")
+@file:Suppress("RedundantNullableReturnType", "RedundantExplicitType", "UNUSED_VARIABLE")
 
 package day_1_kotlin.langrus.solutions
 
@@ -18,7 +18,6 @@ object KotlinWorkshop1 {
         val emptyString = ""
 
 
-
         /* Рабочая зона */
 
         // Если "nullableElvisString" null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
@@ -34,7 +33,6 @@ object KotlinWorkshop1 {
         println("Строка результат равна $notNullUserString")
 
 
-
         /* Бонусные задания */
 
         // Если firstNumber равно null, сумма должна быть null. Если secondNumber равно null, сумма должна быть равна значение firstNumber.
@@ -43,7 +41,7 @@ object KotlinWorkshop1 {
         val notNullAlternative = 0
         val firstNumber: Int? = 10
         val secondNumber: Int? = 20
-        val sum : Int? = firstNumber?.plus(secondNumber ?: firstNumber)
+        val sum: Int? = firstNumber?.plus(secondNumber ?: firstNumber)
         println("Сумма равна {$sum}")
 
 
@@ -63,9 +61,10 @@ object KotlinWorkshop1 {
         val firstIntInput: Int? = MyScanner.scan.nextInt() // <--- вводим первое число
         print("Пожалуйста введите второе число: ")
         val secondIntInput: Int? = MyScanner.scan.nextInt() // <--- вводим второе число
-        val sumIntInputs : Int? = firstIntInput?.plus(secondIntInput ?: notNullAlternative) // <--- делаем замену потенциального 'null' значением по умолчанию
+        val sumIntInputs: Int? = firstIntInput?.plus(
+            secondIntInput ?: notNullAlternative
+        ) // <--- делаем замену потенциального 'null' значением по умолчанию
         println("Исходная строка: $stringInput, Сумма чисел: $sumIntInputs")
-
 
 
         /* Примеры */
@@ -77,7 +76,6 @@ object KotlinWorkshop1 {
         var someNullableNumber: Long? = null
     }
 }
-
 
 
 /* Для корректного прогона воркшопа не модифицируй утилиты ниже */

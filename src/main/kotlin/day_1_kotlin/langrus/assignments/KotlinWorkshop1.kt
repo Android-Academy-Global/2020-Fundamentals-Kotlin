@@ -1,4 +1,13 @@
-@file:Suppress("RedundantNullableReturnType")
+@file:Suppress(
+    "UNREACHABLE_CODE",
+    "DuplicatedCode",
+    "UNUSED_VARIABLE",
+    "ControlFlowWithEmptyBody",
+    "ConstantConditionIf",
+    "RedundantNullableReturnType",
+    "RedundantExplicitType",
+    "unused"
+)
 
 package day_1_kotlin.langrus.assignments
 
@@ -18,7 +27,6 @@ object KotlinWorkshop1 {
         val emptyString = ""
 
 
-
         /* Рабочая зона */
 
         // Если "nullableElvisString" равно null, сделай значение "notNullUserString" равным значение пустой строки "emptyString".
@@ -32,7 +40,6 @@ object KotlinWorkshop1 {
         //  Сделай принудительное присвоение используя !! оператор.
 //        notNullUserString =
 //        println("Строка результат равна $notNullUserString")
-
 
 
         /* Бонусные задания */
@@ -67,7 +74,6 @@ object KotlinWorkshop1 {
 //        println("Исходная строка: $stringInput, Сумма чисел: $sumIntInputs")
 
 
-
         /* Примеры */
 
         val number: Int = -1
@@ -77,7 +83,6 @@ object KotlinWorkshop1 {
         var someNullableNumber: Long? = null
     }
 }
-
 
 
 /* Для корректного прогона воркшопа не модифицируй утилиты ниже */
