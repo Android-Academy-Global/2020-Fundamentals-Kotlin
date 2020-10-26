@@ -3,54 +3,58 @@ package day_1_kotlin.langrus.info
 object D_HowToUseHotkeys {
 
     /*
-    * Intellij idea and Android studio have a lot of templates, shortcuts and hot keys.
-    * And is very flexible and customizable. There are several of them:
+    * В "Intellij idea" и "Android studio" добавлено множество шаблонов, ключевых слов и горячих клавиш.
+    * Всё это может быть гибко настроено и позволяет существенно ускорить написание стандартных частей кода.
+    * Вот некоторые сочетания горячих клавиш, которые могут вам помочь в повседневной работе:
     * */
 
-    // For a fast jump to a method or variable,
-    // place a cursor on it and press "Ctrl+B"
+    // Для быстрого перемещения по местам вызова функции или переменной,
+    // помести курсор на название нужного объекта и зажми "Ctrl+B"
     private fun jumpToMethod() {
     }
 
-    // For a fast jump to the place where you just modified the code,
-    // press "Ctrl+Shift+Backspace".
-    // ---> Write something, place cursor to a different place, press combo.
+    // Для быстрого перемещения к месту, где ты в последний раз модифицировал код,
+    // зажми "Ctrl+Shift+Backspace".
+    // ---> Напиши что-нибудь рядом, пролистай текст до конца и зажми комбо.
 
-    // To memorize several places you are working,
-    // place cursor to the line and press "Ctrl+Shift+[1..9]".
-    // For a jump, press "Ctrl+[1..9]"
+    // Чтобы запомнить несколько мест в коде, в пределах проекта, помести курсор на нужную
+    // строку и зажми "Ctrl+Shift+[1..9]". Где цифра - это номер сохранённого места.
+    // Для быстрого перемещения между закладками зажми "Ctrl+[1..9]".
+    // Чтобы переназначить или удалить закладку, используй тот же номер в другом месте,
+    // или там где находишься сейчас зажми комбо "Ctrl+Shift+[1..9]" два раза подряд.
 
-    // For a fast jump to a line (go to the line),
-    // press "Ctrl+G" and enter the number.
+    // Для быстрого перемещения между строками зажми "Ctrl+G" (go to the line).
+    // В диалоговом окне введи номер.
 
-    // To see a description,
-    // which types of arguments you have to provide to a function, or what type this function returns,
-    // place a cursor on it and press "Ctrl+Q"
+    // Чтобы посмотреть пояснение к классу, функции. Увидеть, какие аргументы принимаются на вход, что возвращается,
+    // какое описание. Помести курсор на названии интересующего объекта и зажми "Ctrl+Q".
     private fun seeTheArgTypes() {
         hiddenArgsContainer(1, "2", 3)
     }
 
-    // One of the "auto-complete" combos is "Alt+Enter".
-    // Start typing a class name, method, or class property and hit combo to see a suggestion.
+    // При вводе текста можно посмотреть предложенные варианты авто-дополнения.
+    // Для этого, начни вводить код и зажми "Ctrl+Space" или "Alt+Enter".
+    // "Alt+Enter" также может содержать подходящий вариант решения ошибки синтаксиса.
 
-    // To fast line copy, press "Ctrl+C" at any place of the line
+    // Чтобы быстро скопировать строку целиком, в любом месте строки зажми "Ctrl+C".
 
-    // To fast line copy and cut, press "Ctrl+X" at any place of the line
+    // Чтобы быстро скопировать и вырезать строку целиком, в любом месте строки зажми "Ctrl+X".
 
-    // To duplicate a current line,
-    // place a cursor to the line and press "Ctrl+D"
+    // Чтобы продублировать строку, в любом месте строки зажми "Ctrl+D".
 
-    // To insert a new line below the current line,
-    // press "Shift+Enter"
+    // Чтобы вставить строку ниже текущей с перемещением курсора, в любом месте текущей строки зажми "Shift+Enter".
 
-    // To move a line upper or lower,
-    // place cursor to the line, press "Alt+Shift" and move line with Up or Down arrows.
+    // Чтобы менять местами строки, зажми "Alt+Shift" и не отпуская используй стрелки клавиатуры вверх, вниз.
 
     @JvmStatic
     fun main(args: Array<String>) {
         jumpToMethod()
     }
 
-    private fun hiddenArgsContainer(a: Int, b: String, c: Any) {
+    /**
+     * Пример для демонстрации Ctrl+Q
+     */
+    private fun hiddenArgsContainer(a: Int, b: String, c: Any): String {
+        return ""
     }
 }
