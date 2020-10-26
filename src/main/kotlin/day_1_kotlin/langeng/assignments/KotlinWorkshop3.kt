@@ -65,8 +65,8 @@ object KotlinWorkshop3 {
 //        printTotalCountOfGuesses(guessCounter)
 
         // TODO 4: Uncomment.
-        //  Add high level function "countHigherGuesses" for printing higher elements from array.
-        // guesses.countHigherGuesses(guesses, randomNumber)
+        //  Add function "countHigherGuesses" for printing higher elements from array.
+        // countHigherGuesses(guesses, randomNumber)
 
         // TODO 5: Uncomment. Create lambda function "countLowerGuesses" for printing lower elements from array.
         //  Do not print element if its value == "-1", the default value given to array on a initializing stage.
@@ -85,7 +85,7 @@ object KotlinWorkshop3 {
     // TODO 4
     // Should count and print guesses that were higher than randomNumber.
     // Should return count as fun result.
-    private fun IntArray.countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
+    private fun countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
         TODO()
     }
 

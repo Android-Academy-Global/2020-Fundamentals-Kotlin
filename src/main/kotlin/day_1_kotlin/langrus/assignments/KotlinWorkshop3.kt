@@ -70,9 +70,9 @@ object KotlinWorkshop3 {
 //        printTotalCountOfGuesses(guessCounter)
 
         // TODO 4: Раскомментируй.
-        //  Напиши функцию высшего порядка "countHigherGuesses" для вывода всех попыток воода, которые оказались выше "randomNumber".
+        //  Напиши функцию "countHigherGuesses" для вывода всех попыток воода, которые оказались выше "randomNumber".
         //  Функция должна возвращать число таких попыток как результат.
-        // guesses.countHigherGuesses(guesses, randomNumber)
+        // countHigherGuesses(guesses, randomNumber)
 
         // TODO 5: Раскомментируй.
         //  Напиши lambda-выражение "countLowerGuesses" для вывода всех попыток воода, которые оказались ниже "randomNumber".
@@ -91,7 +91,7 @@ object KotlinWorkshop3 {
     }
 
     // TODO 4
-    private fun IntArray.countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
+    private fun countHigherGuesses(guesses: IntArray, randomNumber: Int): Int {
         TODO()
     }
 
