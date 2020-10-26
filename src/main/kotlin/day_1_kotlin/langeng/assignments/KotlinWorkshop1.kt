@@ -1,3 +1,5 @@
+@file:Suppress("RedundantNullableReturnType")
+
 package day_1_kotlin.langeng.assignments
 
 import java.util.*
