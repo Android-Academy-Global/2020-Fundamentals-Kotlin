@@ -24,8 +24,8 @@ class Bicycle: Transport(1) {
 /* Exercise area */
 
 // TODO 1: Create a new interface that will be appropriate for new classes below.
-// ? By convention, you have to name Classes and Interfaces with first upper case letter.
-// In "camelCase" format: "someLongClassName".
+// ? By convention, names of Classes and Interfaces start with an upper case letter and use the camel case.
+// Example: "SomeLongClassName".
 interface Fuelable {
     fun isFull(): Boolean
     fun fuel()
