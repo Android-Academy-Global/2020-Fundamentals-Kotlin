@@ -41,7 +41,7 @@ object KotlinWorkshop1 {
         val notNullAlternative = 0
         val firstNumber: Int? = 10
         val secondNumber: Int? = 20
-        val sum : Int? = firstNumber?.plus(secondNumber ?: firstNumber)
+        val sum : Int? = firstNumber?.plus(secondNumber ?: notNullAlternative)
         println("Sum is {$sum}")
 
 
