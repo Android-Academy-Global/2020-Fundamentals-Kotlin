@@ -92,9 +92,9 @@ object KotlinWorkshop2 {
         }
 
         // TODO 5: Выведи в консоль значения элементов массива и индекс, на котором они находятся.
-        //  Новый элемент на новой строке. Это должно выглядеть как "index value".
+        //  Новый элемент на новой строке. Это должно выглядеть как "индекс: значение".
         for ((index, number) in numbersArray.withIndex()){
-            println("$index $number")
+            println("$index: $number")
         }
     }
 
