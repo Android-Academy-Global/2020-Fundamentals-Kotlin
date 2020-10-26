@@ -4,7 +4,7 @@ package day_1_kotlin.langrus.assignments
 
 import java.util.*
 
-// Воркшоп #1 - val, var, null, kotlin null безопасность, Элвис оператор
+// Практическая работа #1 - val, var, null, kotlin null безопасность, Элвис оператор
 
 object KotlinWorkshop1 {
 
@@ -25,13 +25,13 @@ object KotlinWorkshop1 {
         // TODO 1: Раскомментируй.
         //  Присвой "notNullUserString" значение из "nullableElvisString". Исправиь присвоение используя Элвис-оператор.
 //        var notNullUserString: String =
-//        println("Результирующая строка : $notNullUserString")
+//        println("Строка результат равна $notNullUserString")
 
         // TODO 2: Раскомментируй.
         //  По факту мы знаем, что значение "nullableAssertionString" не равно null (см. строку 17).
         //  Сделай принудительное присвоение используя !! оператор.
 //        notNullUserString =
-//        println("Результирующая строка : $notNullUserString")
+//        println("Строка результат равна $notNullUserString")
 
 
 
@@ -72,7 +72,7 @@ object KotlinWorkshop1 {
 
         val number: Int = -1
         val someNumber: Double = 2.5
-        val someString: String = "Привет мир"
+        val someString: String = "Привет, мир!"
         val someFlag: Boolean = true
         var someNullableNumber: Long? = null
     }
