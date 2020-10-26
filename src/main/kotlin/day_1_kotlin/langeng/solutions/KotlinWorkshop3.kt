@@ -82,6 +82,7 @@ object KotlinWorkshop3 {
 
         // TODO 5: Uncomment.
         //  Create lambda function "countLowerGuesses" for printing lower elements from array.
+        //  Do not print element if its value == "-1", the default value given to array on a initializing stage.
         countLowerGuesses(guesses, randomNumber)
 
         // TODO 6: Uncomment.
@@ -120,7 +121,7 @@ object KotlinWorkshop3 {
     val countLowerGuesses: (IntArray, Int) -> Unit = { guesses, randomNumber ->
         var counter = 0
         for (guess in guesses) {
-            if (guess < randomNumber) {
+            if (guess != -1 && guess < randomNumber) {
                 counter++
                 println("$counter) $guess is lower than $randomNumber")
             }
@@ -176,10 +177,6 @@ object KotlinWorkshop3 {
     }
 
     private fun createIntArrayOfCapacity(capacity: Int): IntArray {
-        val array = mutableListOf<Int>()
-        for (i in 0 until capacity) {
-            array.add(0)
-        }
-        return array.toIntArray()
+        return IntArray(capacity) { i -> -1 }
     }
 }

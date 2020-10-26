@@ -69,6 +69,7 @@ object KotlinWorkshop3 {
         // guesses.countHigherGuesses(guesses, randomNumber)
 
         // TODO 5: Uncomment. Create lambda function "countLowerGuesses" for printing lower elements from array.
+        //  Do not print element if its value == "-1", the default value given to array on a initializing stage.
         // countLowerGuesses(guesses, randomNumber)
 
         // TODO 6: Uncomment. Print every element of guesses in separate line via .forEach high-level function.
@@ -141,10 +142,6 @@ object KotlinWorkshop3 {
     }
 
     private fun createIntArrayOfCapacity(capacity: Int): IntArray {
-        val array = mutableListOf<Int>()
-        for (i in 0 until capacity) {
-            array.add(0)
-        }
-        return array.toIntArray()
+        return IntArray(capacity) { i -> -1 }
     }
 }

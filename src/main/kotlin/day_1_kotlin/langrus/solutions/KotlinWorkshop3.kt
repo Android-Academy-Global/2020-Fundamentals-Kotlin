@@ -88,6 +88,7 @@ object KotlinWorkshop3 {
 
         // TODO 5: Раскомментируй.
         //  Напиши lambda-выражение "countLowerGuesses" для вывода всех попыток воода, которые оказались ниже "randomNumber".
+        //  И не равны значению "-1", заданному элементу массива при инициализации массива.
         countLowerGuesses(guesses, randomNumber)
 
         // TODO 6: Раскомментируй.
@@ -123,7 +124,7 @@ object KotlinWorkshop3 {
     val countLowerGuesses: (IntArray, Int) -> Unit = { guesses, randomNumber ->
         var counter = 0
         for (guess in guesses) {
-            if (guess < randomNumber) {
+            if (guess != -1 && guess < randomNumber) {
                 counter++
                 println("$counter) $guess is lower than $randomNumber")
             }
@@ -179,10 +180,6 @@ object KotlinWorkshop3 {
     }
 
     private fun createIntArrayOfCapacity(capacity: Int): IntArray {
-        val array = mutableListOf<Int>()
-        for (i in 0 until capacity) {
-            array.add(0)
-        }
-        return array.toIntArray()
+        return IntArray(capacity) { i -> -1 }
     }
 }
