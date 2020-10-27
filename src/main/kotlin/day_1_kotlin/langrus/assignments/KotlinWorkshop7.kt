@@ -49,7 +49,7 @@ object KotlinWorkshop7 {
 
 
         // Не исправляй! Дано:
-        val weatherMap = mapOf(
+        val weatherMap = mutableMapOf(
             "Moscow" to 2,
             "St. Petersburg" to -1,
             "Minsk" to 4
