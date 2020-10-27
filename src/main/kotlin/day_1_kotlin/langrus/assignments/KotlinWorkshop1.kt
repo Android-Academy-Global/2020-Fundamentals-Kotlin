@@ -37,7 +37,7 @@ object KotlinWorkshop1 {
 //        println("Строка результат равна $notNullUserString")
 
         // TODO 2: Раскомментируй.
-        //  По факту мы знаем, что значение "nullableAssertionString" не равно null (см. строку 17).
+        //  По факту мы знаем, что значение "nullableAssertionString" не равно null.
         //  Сделай принудительное присвоение используя !! оператор.
 //        notNullUserString =
 //        println("Строка результат равна $notNullUserString")
