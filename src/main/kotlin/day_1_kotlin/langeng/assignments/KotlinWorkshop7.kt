@@ -46,7 +46,7 @@ object KotlinWorkshop7 {
 
 
         // Don't touch! Given:
-        val weatherMap = mapOf(
+        val weatherMap = mutableMapOf(
             "Moscow" to 2,
             "St. Petersburg" to -1,
             "Minsk" to 4
