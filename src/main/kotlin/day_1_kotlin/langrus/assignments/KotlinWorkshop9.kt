@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package day_1_kotlin.langrus.assignments
 
 // workshop #9 - generics
@@ -26,7 +28,7 @@ fun main() {
 }
 
 
-class Programmer<T: Language>() {
+class Programmer<T: Language> {
 
     fun howManyConceptsDoIKnow(): Int = TODO()
 

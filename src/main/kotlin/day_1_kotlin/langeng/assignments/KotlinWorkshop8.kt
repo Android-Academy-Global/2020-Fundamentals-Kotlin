@@ -1,3 +1,5 @@
+@file:Suppress("MayBeConstant", "unused", "UNUSED_VARIABLE")
+
 package day_1_kotlin.langeng.assignments
 // workshop #8 - const, companion object, extension func*
 

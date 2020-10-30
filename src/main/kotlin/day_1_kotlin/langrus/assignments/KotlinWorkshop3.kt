@@ -1,3 +1,5 @@
+@file:Suppress("CanBeVal", "UNUSED_PARAMETER", "unused", "UNUSED_VARIABLE", "UNUSED_ANONYMOUS_PARAMETER")
+
 package day_1_kotlin.langrus.assignments
 
 import java.util.*

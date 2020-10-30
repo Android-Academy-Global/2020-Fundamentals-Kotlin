@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package day_1_kotlin.langrus.assignments
 
 // Workshop #5 - inheritance, abstract, interface

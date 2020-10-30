@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_VARIABLE")
+
 package day_1_kotlin.langeng.assignments
 
 // Workshop #7 - list, mutable list, useful functions, maps
