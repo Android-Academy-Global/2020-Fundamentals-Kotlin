@@ -25,13 +25,13 @@ class Person(phoneCode: String) {
     // * * * Bonus task * * * (work on home)
 
     //TODO 3: make this fun as extension to a list outside the Person class
-    private fun replacePlacesWithThePhoneCode(list: List<Any>, placeNum: Int = 3) {
-        list.mapIndexed { index, any -> if (index % placeNum == 0) code else any}
+    private fun replacePlacesWithThePhoneCode(list: List<Any>, placeNum: Int = 3): List<Any> {
+        return list.mapIndexed { index, any -> if (index % placeNum == 0) code else any}
     }
 }
 
 fun main(){
-    val lst = mutableListOf("1", 3, 4, "Patrick", 3.4, "123-59")
+    val list = mutableListOf("1", 3, 4, "Patrick", 3.4, "123-59")
 
     val p = Person("45-45-45")
 
